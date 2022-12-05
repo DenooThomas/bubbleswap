@@ -28,11 +28,11 @@ export default Navbar;
 const headerHeight = '100px';
 
 const Header = styled.div`
-    ${flexRow('nowrap', 'space-between', 'center')};
-    width: 100%;
-    height: ${headerHeight};
-    padding: 20px 40px;
-    margin-bottom: 2rem;
+  ${flexRow('nowrap', 'space-between', 'center')};
+  width: 100%;
+  height: ${headerHeight};
+  padding: 10px 20px;
+  margin-bottom: 1rem;
 `;
 
 const Logo = styled.img`
@@ -40,13 +40,14 @@ const Logo = styled.img`
 `;
 
 const Nav = styled.nav`
-    ${flexRow('nowrap', 'space-between', 'center')};
-    height: 60px;
+  ${flexRow('nowrap', 'space-between', 'center')};
+  height: 60px;
 `;
 
 const NavItem = styled.li`
-    padding: 0 30px;
-    line-height: 60px;
+  padding: 0 20px;
+  line-height: 60px;
+  font-size: 0.8rem;
 `;
 
 const Signup = styled.button`

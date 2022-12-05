@@ -2,6 +2,7 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Colors from 'assets/colors/colors';
 import Banner from 'pages/Banner/Banner';
+import WhyBubble from 'pages/WhyBubble/WhyBubble';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <GlobalStyle />
       <BodyOverflow />
       <Banner />
+      <WhyBubble />
     </>
   );
 }

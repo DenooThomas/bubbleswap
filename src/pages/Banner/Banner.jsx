@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
 import { flexColumn, flexRow } from 'assets/styling/flexer';
 import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
-import Navbar from '../../components/Navbar/Navbar';
+import Navbar from './Navbar/Navbar';
 
 function Banner() {
   return (
@@ -30,32 +30,33 @@ function Banner() {
 export default Banner;
 
 const Wrapper = styled.div`
-  ${flexColumn('nowrap', 'center', 'center')};
-  width: 100vw;
-  padding: 0 60px;
+  ${flexColumn('nowrap', 'flex-start', 'center')};
+  height: 100vh;
 `;
 
 const Title = styled.h1`
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 2px;
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
 `;
 
 const BannerContent = styled.div`
   ${flexRow('nowrap', 'center', 'baseline')};
   width: 100%;
   height: 75px;
+  margin-bottom: 2rem;
   z-index: 2;
 `;
 
 const SubTitle = styled.h2`
-  width: 60%;
+  max-width: 700px;
   text-align: justify;
   display: inline-block;
   vertical-align: center;
   font-size: 1rem;
+  font-weight: 200;
   text-align: center;
   margin-right: 1.5rem;
 `;

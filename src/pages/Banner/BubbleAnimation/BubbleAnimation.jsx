@@ -10,13 +10,15 @@ import swap from 'assets/images/Swap.png';
 function BubbleAnimation() {
   return (
     <Bubble>
-      <LetterB src={bCap} alt="Capital letter B" />
-      <LetterU src={uSmall} alt="Capital letter B" />
-      <LetterBSmallFirst src={bSmall} alt="Capital letter B" />
-      <LetterBSmallSecond src={bSmall} alt="Capital letter B" />
-      <LetterL src={lSmall} alt="Capital letter B" />
-      <LetterE src={eSmall} alt="Capital letter B" />
-      <Swap src={swap} alt="Swap" />
+      <div>
+        <LetterB src={bCap} alt="Capital letter B" />
+        <LetterU src={uSmall} alt="Capital letter B" />
+        <LetterBSmallFirst src={bSmall} alt="Capital letter B" />
+        <LetterBSmallSecond src={bSmall} alt="Capital letter B" />
+        <LetterL src={lSmall} alt="Capital letter B" />
+        <LetterE src={eSmall} alt="Capital letter B" />
+        <Swap src={swap} alt="Swap" />
+      </div>
     </Bubble>
   );
 }
@@ -36,39 +38,39 @@ const Letter = styled.img`
 `;
 
 const LetterB = styled(Letter)`
-    left: 300px;
+    right: 830px;
     z-index: 8;
 `;
 
 const LetterU = styled(Letter)`
-    left: 410px;
+    right: 720px;
     top: 25px;
     z-index: 7;
 `;
 
 const LetterBSmallFirst = styled(Letter)`
-    left: 525px;
+    right: 600px;
     top: -18px;
     z-index: 6;
 `;
 
 const LetterBSmallSecond = styled(Letter)`
-    left: 650px;
+    right: 485px;
     z-index: 5;
 `;
 
 const LetterL = styled(Letter)`
-    left: 775px;
-    top: -15px;
+    right: 430px;
+    top: -20px;
     z-index: 4;
 `;
 
 const LetterE = styled(Letter)`
-    left: 830px;
+    right: 300px;
 `;
 
 const Swap = styled(Letter)`
     z-index: 10;
-    left: 620px;
-    top: 100px
+    right: 100px;
+    top: 100px;
 `;
