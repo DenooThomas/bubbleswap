@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
 import { flexColumn, flexRow } from 'assets/styling/flexer';
+import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
 import Navbar from '../../components/Navbar/Navbar';
 
 function Banner() {
@@ -18,6 +19,7 @@ function Banner() {
           </SubTitle>
           <Button type="button">Join presale</Button>
         </BannerContent>
+        <BubbleAnimation />
         <BubbleLeft src={bubble} alt="bubble" />
         <BubbleRight src={bubble} alt="bubble" />
       </Wrapper>

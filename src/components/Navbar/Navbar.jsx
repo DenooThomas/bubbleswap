@@ -32,7 +32,7 @@ const Header = styled.div`
     width: 100%;
     height: ${headerHeight};
     padding: 20px 40px;
-    margin-bottom: 50px;
+    margin-bottom: 2rem;
 `;
 
 const Logo = styled.img`
