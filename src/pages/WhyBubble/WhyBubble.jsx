@@ -18,11 +18,11 @@ function WhyBubble() {
       </LeftCont>
       <HalfCont>
         <Bubble />
-        <Text>
+        <SubText>
           Vote for the future of Bubble and submit your proposals.
           Together, the community has ownership over the treasury and
           on top of that passive income earnings based on generated revenue.
-        </Text>
+        </SubText>
       </HalfCont>
       <BubbleRight src={bubble} alt="bubble" />
     </Wrapper>
@@ -34,6 +34,8 @@ export default WhyBubble;
 const Wrapper = styled.div`
   ${flexRow('nowrap', 'center', 'center')};
   position: relative;
+  margin-bottom: 12rem;
+  padding: 0 5rem;
 
   &:after {
     content: '';
@@ -53,7 +55,7 @@ const Wrapper = styled.div`
 const HalfCont = styled.div`
   ${flexColumn('nowrap', 'space-around', 'flex-start')};
   flex-basis: 50%;
-  padding: 0 5rem;
+  
   z-index: 2; 
 
   & * {
@@ -74,13 +76,16 @@ const Title = styled.h1`
 `;
 
 const SubTitle = styled.h2`
-
   font-size: 2.2rem;
   letter-spacing: 1px;
 `;
 
 const Text = styled.p`
   
+`;
+
+const SubText = styled.p`
+  font-size: 0.9rem;
 `;
 
 const Bubble = styled.div`

@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Colors from 'assets/colors/colors';
 import Banner from 'pages/Banner/Banner';
 import WhyBubble from 'pages/WhyBubble/WhyBubble';
+import BubbleDao from 'pages/BubbleDao/BubbleDao';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Banner />
       <Wrapper>
         <WhyBubble />
+        <BubbleDao />
       </Wrapper>
     </>
   );
