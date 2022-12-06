@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Colors from 'assets/colors/colors';
 import Banner from 'pages/Banner/Banner';
-import WhyBubble from 'pages/WhyBubble/WhyBubble';
+import WhyBubble from 'pages/BubbleWhy/BubbleWhy';
 import BubbleDao from 'pages/BubbleDao/BubbleDao';
 import BubbleTreasury from 'pages/BubbleTreasury/BubbleTreasury';
 

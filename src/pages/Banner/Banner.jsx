@@ -45,7 +45,7 @@ const Title = styled.h1`
 `;
 
 const BannerContent = styled.div`
-  ${flexRow('nowrap', 'center', 'baseline')};
+  ${flexRow('nowrap', 'center', 'center')};
   width: 100%;
   height: 75px;
   margin-bottom: 2rem;

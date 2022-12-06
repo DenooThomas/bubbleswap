@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ButtonGlow from 'assets/styling/button';
 import bubble from 'assets/images/bubble.png';
 
-function WhyBubble() {
+function BubbleWhy() {
   return (
     <Wrapper>
       <LeftCont>
@@ -29,7 +29,7 @@ function WhyBubble() {
   );
 }
 
-export default WhyBubble;
+export default BubbleWhy;
 
 const Wrapper = styled.div`
   ${flexRow('nowrap', 'center', 'center')};
