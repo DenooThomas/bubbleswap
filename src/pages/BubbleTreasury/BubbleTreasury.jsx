@@ -26,6 +26,21 @@ export default BubbleTreasury;
 
 const Wrapper = styled.div`
     ${flexRow('wrap', 'center', 'flex-start')};
+    position: relative;
+
+    &:after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    right: 50px;
+    top: -100px;
+    bottom: -150px;
+    z-index: 1;
+    transform: skew(-10deg) rotate(-10deg);
+    border-radius: 2rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(110,110,110,0.01) 0%, rgba(0,0,0,0) 80%);
+  }
 `;
 
 const Title = styled.h1`
