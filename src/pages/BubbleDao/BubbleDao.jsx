@@ -70,6 +70,6 @@ const BubbleRight = styled.img`
   position: absolute;
   top: -200px;
   right: -550px;
-  transform: rotate(-20deg);
+  transform: rotate(-15deg);
   z-index: 1;
 `;
