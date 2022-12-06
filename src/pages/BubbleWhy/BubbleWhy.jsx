@@ -56,6 +56,7 @@ const HalfCont = styled.div`
   ${flexColumn('nowrap', 'space-around', 'flex-start')};
   flex-basis: 50%;
   z-index: 2; 
+  padding: 40px;
 
   & * {
     margin-bottom: 1.5rem;
@@ -80,7 +81,7 @@ const SubTitle = styled.h2`
 `;
 
 const Text = styled.p`
-  
+  text-align: justify;
 `;
 
 const SubText = styled.p`
