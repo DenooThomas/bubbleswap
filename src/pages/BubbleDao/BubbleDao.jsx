@@ -2,11 +2,14 @@ import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
 import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
+import BubbleDaoImg from 'assets/images/BubbleDao.png';
 
 function BubbleDao() {
   return (
     <Wrapper>
-      <BubbleTitle />
+      <BubbleTitle>
+        <img src={BubbleDaoImg} alt="Bubble Dao header" />
+      </BubbleTitle>
       <SubTitle>
         We believe that the Bubble organization can achieve great success through
         a DAO governance model.
@@ -39,16 +42,11 @@ const Wrapper = styled.div`
 `;
 
 const BubbleTitle = styled.div`
-    width: 700px;
+    ${flexRow('nowrap', 'flex-end', 'center')};
+    z-index: 2;
+    width: 100%;
     height: 400px;
-    background-color: red;
-    margin-bottom: 1.5rem;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-right: 150px;
 `;
 
 const SubTitle = styled.h2`
