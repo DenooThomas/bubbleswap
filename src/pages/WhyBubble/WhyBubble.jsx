@@ -67,9 +67,9 @@ const LeftCont = styled(HalfCont)`
 `;
 
 const Title = styled.h1`
+  width: 100%;
   font-weight: 200;
   text-align: center;
-
   text-transform: uppercase;
   letter-spacing: 0.8px;
 `;
