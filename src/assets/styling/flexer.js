@@ -2,7 +2,7 @@ const flexRow = (wrap, justify, align) => `
     display: flex;
     flex-wrap: ${wrap};
     justify-content: ${justify};
-    align-item: ${align};
+    align-items: ${align};
 `;
 export { flexRow };
 
@@ -11,6 +11,6 @@ const flexColumn = (wrap, justify, align) => `
     flex-direction: column;
     flex-wrap: ${wrap};
     justify-content: ${justify};
-    align-item: ${align};
+    align-items: ${align};
 `;
 export { flexColumn };

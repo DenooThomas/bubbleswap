@@ -62,7 +62,9 @@ const TextCont = styled.div`
 
 const Text = styled.p`
     flex-basis: 50%;
-    padding: 5rem;
+    padding: 3rem;
+    padding-left: 2rem;
+    padding-right: 6rem;
     font-size: 0.9rem;
 `;
 

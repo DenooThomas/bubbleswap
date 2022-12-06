@@ -55,7 +55,6 @@ const Wrapper = styled.div`
 const HalfCont = styled.div`
   ${flexColumn('nowrap', 'space-around', 'flex-start')};
   flex-basis: 50%;
-  
   z-index: 2; 
 
   & * {
