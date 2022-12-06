@@ -32,49 +32,55 @@ function WhyBubble() {
 export default WhyBubble;
 
 const Wrapper = styled.div`
-    ${flexRow('nowrap', 'center', 'center')};
-    position: relative;
+  ${flexRow('nowrap', 'center', 'center')};
+  position: relative;
 
-    &:after {
-        content: '';
-        position: absolute;
-        left: 30px;
-        right: 50px;
-        top: -100px;
-        bottom: -150px;
-        z-index: 1;
-        transform: skew(-10deg) rotate(-10deg);
-        border-radius: 2rem;
-        background: rgb(255,255,255);
-        background: linear-gradient(180deg, rgba(110,110,110,0.01) 0%, rgba(0,0,0,0) 80%);
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    right: 50px;
+    top: -100px;
+    bottom: -150px;
+    z-index: 1;
+    transform: skew(-10deg) rotate(-10deg);
+    border-radius: 2rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(110,110,110,0.01) 0%, rgba(0,0,0,0) 80%);
+  }
 `;
 
 const HalfCont = styled.div`
-    ${flexColumn('nowrap', 'space-around', 'flex-start')};
-    flex-basis: 50%;
-    padding: 0 5rem;
-    z-index: 2; 
+  ${flexColumn('nowrap', 'space-around', 'flex-start')};
+  flex-basis: 50%;
+  padding: 0 5rem;
+  z-index: 2; 
+
+  & * {
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const LeftCont = styled(HalfCont)`
   height: 50%;
 `;
 
-const Text = styled.p`
-    margin-bottom: 1rem;
-`;
-
 const Title = styled.h1`
-    font-weight: 200;
-    text-align: center;
-    margin-bottom: 1rem;
+  font-weight: 200;
+  text-align: center;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 `;
 
 const SubTitle = styled.h2`
-    margin-bottom: 1rem;
-    font-size: 2.2rem;
-    letter-spacing: 1px;
+
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+`;
+
+const Text = styled.p`
+  
 `;
 
 const Bubble = styled.div`
@@ -86,7 +92,6 @@ const Bubble = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-bottom: 1rem;
 `;
 
 const BubbleRight = styled.img`

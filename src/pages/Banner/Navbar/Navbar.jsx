@@ -17,7 +17,7 @@ function Navbar() {
         <NavItem>Tokenomics</NavItem>
       </Nav>
       <Signup>
-        JOIN NOW
+        Join presale
       </Signup>
     </Header>
   );
@@ -51,6 +51,7 @@ const NavItem = styled.li`
 `;
 
 const Signup = styled.button`
+  text-transform: uppercase;
   z-index: 2;
   height: 40px;
   padding: 0px 30px;
