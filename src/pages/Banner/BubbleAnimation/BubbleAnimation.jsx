@@ -12,11 +12,11 @@ function BubbleAnimation() {
     <Bubble>
       <div>
         <LetterB src={bCap} alt="Capital letter B" />
-        <LetterU src={uSmall} alt="Capital letter B" />
-        <LetterBSmallFirst src={bSmall} alt="Capital letter B" />
-        <LetterBSmallSecond src={bSmall} alt="Capital letter B" />
-        <LetterL src={lSmall} alt="Capital letter B" />
-        <LetterE src={eSmall} alt="Capital letter B" />
+        <LetterU src={uSmall} alt="Small letter u" />
+        <LetterBSmallFirst src={bSmall} alt="Small letter b" />
+        <LetterBSmallSecond src={bSmall} alt="Small letter b" />
+        <LetterL src={lSmall} alt="Small letter l" />
+        <LetterE src={eSmall} alt="Small letter e" />
         <Swap src={swap} alt="Swap" />
       </div>
     </Bubble>

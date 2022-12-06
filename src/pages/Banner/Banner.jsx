@@ -31,7 +31,9 @@ export default Banner;
 
 const Wrapper = styled.div`
   ${flexColumn('nowrap', 'flex-start', 'center')};
+  width: 100%;
   height: 100vh;
+  padding: 0 4rem;
 `;
 
 const Title = styled.h1`
@@ -68,7 +70,7 @@ const Button = styled.button`
   padding: 5px 35px;
   background: rgb(241,83,174);
   background: linear-gradient(145deg, rgba(241,83,174,1) 0%, rgba(238,80,45,1) 100%);
-  box-shadow: 0px 2px 5px 1px rgba(241,83,174,1);
+  box-shadow: 0px 2px 10px 1px rgba(241,83,174,1);
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1.7px;
