@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
 import { flexColumn, flexRow } from 'assets/styling/flexer';
+import ButtonGlow from 'assets/styling/button';
 import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
 import Navbar from './Navbar/Navbar';
 
 function Banner() {
   return (
-    <div>
+    <>
       <Navbar />
       <Wrapper>
         <Title>Bubble liquid dex trading</Title>
@@ -17,13 +18,13 @@ function Banner() {
             Liquidity is secured by perpetually burning LP tokens
             and + and incentivizing higher rewards for LP providers.
           </SubTitle>
-          <Button type="button">Join presale</Button>
+          <ButtonGlow type="button">Join presale</ButtonGlow>
         </BannerContent>
         <BubbleAnimation />
         <BubbleLeft src={bubble} alt="bubble" />
         <BubbleRight src={bubble} alt="bubble" />
       </Wrapper>
-    </div>
+    </>
   );
 }
 
@@ -33,7 +34,6 @@ const Wrapper = styled.div`
   ${flexColumn('nowrap', 'flex-start', 'center')};
   width: 100%;
   height: 100vh;
-  padding: 0 4rem;
 `;
 
 const Title = styled.h1`
@@ -61,19 +61,6 @@ const SubTitle = styled.h2`
   font-weight: 200;
   text-align: center;
   margin-right: 1.5rem;
-`;
-
-const Button = styled.button`
-  height: 50px;
-  border: none;
-  border-radius: 1.1rem;
-  padding: 5px 35px;
-  background: rgb(241,83,174);
-  background: linear-gradient(145deg, rgba(241,83,174,1) 0%, rgba(238,80,45,1) 100%);
-  box-shadow: 0px 2px 10px 1px rgba(241,83,174,1);
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1.7px;
 `;
 
 const BubbleLeft = styled.img`

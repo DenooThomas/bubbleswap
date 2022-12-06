@@ -1,5 +1,5 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import Colors from 'assets/colors/colors';
 import Banner from 'pages/Banner/Banner';
 import WhyBubble from 'pages/WhyBubble/WhyBubble';
@@ -10,7 +10,9 @@ function App() {
       <GlobalStyle />
       <BodyOverflow />
       <Banner />
-      <WhyBubble />
+      <Wrapper>
+        <WhyBubble />
+      </Wrapper>
     </>
   );
 }
@@ -33,4 +35,9 @@ const BodyOverflow = createGlobalStyle`
   overflow-x: hidden;
   background-color: ${Colors.black};
  }
+`;
+
+const Wrapper = styled.div`
+  width: 100%;
+  padding: 0 4rem;
 `;
