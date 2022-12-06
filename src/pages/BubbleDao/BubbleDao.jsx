@@ -47,6 +47,8 @@ const BubbleTitle = styled.div`
     width: 100%;
     height: 400px;
     padding-right: 150px;
+    margin-top: -4rem;
+    margin-bottom: 1.5rem;
 `;
 
 const SubTitle = styled.h2`
