@@ -39,6 +39,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     color: ${Colors.white};
     list-style-type: none;
+    z-index: 2;
   }
 `;
 

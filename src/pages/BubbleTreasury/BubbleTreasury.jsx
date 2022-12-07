@@ -1,23 +1,33 @@
-import { flexRow } from 'assets/styling/flexer';
+import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
 import styled from 'styled-components';
-import DiagramImg from 'assets/images/Diagram.png';
-import { Title } from 'assets/styling/text';
+import DiagramImg from 'assets/images/BubbleTreasury/Diagram.png';
+import WalletImg from 'assets/images/BubbleTreasury/wallet.png';
+import { SubTitle, Title, Text } from 'assets/styling/text';
+import { GlassBackground, ShadePseudo } from 'assets/styling/backgrounds';
+import BubbleDefault from 'assets/styling/bubble';
 
 function BubbleTreasury() {
   return (
     <Wrapper>
-      <Title center bold large>Bubble treasury</Title>
-      <HalfCont>
-        <Wallet>
-          <h2>All wallets are protected through safe multisig wallts</h2>
-          <div>
-            <p>0xb794f5ea0ba39494ce839613fffba74279579268</p>
-            <p>0xb794f5ea0ba39494ce839613fffba74279579268</p>
-            <p>0xb794f5ea0ba39494ce839613fffba74279579268</p>
-          </div>
-        </Wallet>
-      </HalfCont>
+      <StyledTitle center bold large>Bubble treasury</StyledTitle>
+      <Wallet>
+        <StyledSubTitle>All wallets are protected through safe multisig wallts</StyledSubTitle>
+        <WalletItem>
+          <WalletIcon src={WalletImg} alt="Wallet icon" />
+          <p>0xb794f5ea0ba39494ce839613fffba74279579268</p>
+        </WalletItem>
+        <WalletItem>
+          <WalletIcon src={WalletImg} alt="Wallet icon" />
+          <span>0xb794f5ea0ba39494ce839613fffba74279579268</span>
+        </WalletItem>
+        <WalletItem>
+          <WalletIcon src={WalletImg} alt="Wallet icon" />
+          <span>0xb794f5ea0ba39494ce839613fffba74279579268</span>
+        </WalletItem>
+        <StyledText>Follow treasury</StyledText>
+        <WalletBubble />
+      </Wallet>
       <Diagram src={DiagramImg} alt="Diagram" />
     </Wrapper>
   );
@@ -26,36 +36,52 @@ function BubbleTreasury() {
 export default BubbleTreasury;
 
 const Wrapper = styled.div`
-    ${flexRow('wrap', 'center', 'flex-start')};
-    position: relative;
-
-    &:after {
-    content: '';
-    position: absolute;
-    left: 30px;
-    right: 50px;
-    top: -100px;
-    bottom: -150px;
-    z-index: 1;
-    transform: skew(-10deg) rotate(-10deg);
-    border-radius: 2rem;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(110,110,110,0.01) 0%, rgba(0,0,0,0) 80%);
-  }
-`;
-
-const HalfCont = styled.div`
-  flex-basis: 50%;
-  padding: 20px;
-`;
-
-const Diagram = styled.img`
-  flex-basis: 50%;
-  padding: 20px;
+  ${flexRow('wrap', 'space-around', 'flex-start')};
+  position: relative;
+  margin-bottom: 6rem;
+  ${ShadePseudo}
 `;
 
 const Wallet = styled.div`
-  width: 360px;
-  height: 160px;
-  background-color: red;
+  ${flexColumn('nowrap', 'center', 'flex-end')}
+  margin-top: 60px;
+  padding: 0 20px;
+`;
+
+const WalletItem = styled.div`
+  ${flexRow('nowrap', 'space-between', 'center')};
+  padding: 20px;
+  padding-right: 20px;
+  ${GlassBackground};
+  border-radius: 0.5rem;
+  margin: 1px;
+`;
+
+const WalletIcon = styled.img`
+  padding-right: 20px;
+`;
+
+const Diagram = styled.img`
+  max-width: 560px;
+`;
+
+const WalletBubble = styled(BubbleDefault)`
+  top: 0;
+  left: -100px;
+`;
+
+const StyledTitle = styled(Title)`
+  margin-bottom: 20px;
+`;
+
+const StyledSubTitle = styled(SubTitle)`
+  text-align: center;
+  margin-bottom: 20px;
+  width: 70%;
+`;
+
+const StyledText = styled(Text)`
+  width: 100%;
+  text-align: right;
+  padding-top: 20px;
 `;

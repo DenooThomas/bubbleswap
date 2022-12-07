@@ -7,6 +7,7 @@ import tickerImg from 'assets/images/ticker.png';
 import {
   Title, SubTitle, Text, SubText,
 } from 'assets/styling/text';
+import { ShadePseudo } from 'assets/styling/backgrounds';
 
 function BubbleWhy() {
   return (
@@ -40,20 +41,7 @@ const Wrapper = styled.div`
   position: relative;
   margin-bottom: 12rem;
   padding: 0 5rem;
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 30px;
-    right: 50px;
-    top: 0px;
-    bottom: -150px;
-    z-index: 1;
-    transform: skew(-10deg) rotate(-10deg);
-    border-radius: 2rem;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(110,110,110,0.01) 0%, rgba(0,0,0,0) 80%);
-  }
+  ${ShadePseudo}
 `;
 
 const HalfCont = styled.div`
