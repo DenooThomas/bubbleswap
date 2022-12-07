@@ -40,7 +40,7 @@ const Wrapper = styled.div`
     height: 100vh;
     position: relative;
     padding: 0 5rem;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
 `;
 
 const BubbleTitle = styled.div`

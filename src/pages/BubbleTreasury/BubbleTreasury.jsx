@@ -14,6 +14,7 @@ function BubbleTreasury() {
       <Wallet>
         <StyledSubTitle>All wallets are protected through safe multisig wallts</StyledSubTitle>
         <WalletItem>
+          <WalletBubble />
           <WalletIcon src={WalletImg} alt="Wallet icon" />
           <p>0xb794f5ea0ba39494ce839613fffba74279579268</p>
         </WalletItem>
@@ -26,7 +27,6 @@ function BubbleTreasury() {
           <span>0xb794f5ea0ba39494ce839613fffba74279579268</span>
         </WalletItem>
         <StyledText>Follow treasury</StyledText>
-        <WalletBubble />
       </Wallet>
       <Diagram src={DiagramImg} alt="Diagram" />
     </Wrapper>
@@ -50,6 +50,7 @@ const Wallet = styled.div`
 
 const WalletItem = styled.div`
   ${flexRow('nowrap', 'space-between', 'center')};
+  position: relative;
   padding: 20px;
   padding-right: 20px;
   ${GlassBackground};
@@ -66,8 +67,8 @@ const Diagram = styled.img`
 `;
 
 const WalletBubble = styled(BubbleDefault)`
-  top: 0;
-  left: -100px;
+  top: -200px;
+  left: -250px;
 `;
 
 const StyledTitle = styled(Title)`
