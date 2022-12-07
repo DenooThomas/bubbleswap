@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
 import { flexColumn, flexRow } from 'assets/styling/flexer';
 import { ButtonGlow } from 'assets/styling/button';
+import { Title } from 'assets/styling/text';
 import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
 import Navbar from './Navbar/Navbar';
 
@@ -11,7 +12,7 @@ function Banner() {
     <>
       <Navbar />
       <Wrapper>
-        <Title>Bubble liquid dex trading</Title>
+        <Title center bold large>Bubble liquid dex trading</Title>
         <BannerContent>
           <SubTitle>
             Bubble generates deeper liquidity for optimal trading experience.
@@ -34,14 +35,6 @@ const Wrapper = styled.div`
   ${flexColumn('nowrap', 'flex-start', 'center')};
   width: 100%;
   margin-bottom: 6rem;
-`;
-
-const Title = styled.h1`
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
 `;
 
 const BannerContent = styled.div`

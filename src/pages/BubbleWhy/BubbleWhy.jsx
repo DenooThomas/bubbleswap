@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import { ButtonGlow } from 'assets/styling/button';
 import bubble from 'assets/images/bubble.png';
 import tickerImg from 'assets/images/ticker.png';
+import {
+  Title, SubTitle, Text, SubText,
+} from 'assets/styling/text';
 
 function BubbleWhy() {
   return (
@@ -66,27 +69,6 @@ const HalfCont = styled.div`
 
 const LeftCont = styled(HalfCont)`
   height: 50%;
-`;
-
-const Title = styled.h1`
-  width: 100%;
-  font-weight: 200;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-`;
-
-const SubTitle = styled.h2`
-  font-size: 2.2rem;
-  letter-spacing: 1px;
-`;
-
-const Text = styled.p`
-  text-align: justify;
-`;
-
-const SubText = styled.p`
-  font-size: 0.9rem;
 `;
 
 const Bubble = styled.img`

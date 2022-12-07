@@ -19,10 +19,10 @@ function Footer() {
           <ListItem>Documentation</ListItem>
         </List>
         <List>
-          <ListItem>Discord</ListItem>
-          <ListItem>Twitter</ListItem>
-          <ListItem>Wallet</ListItem>
-          <ListItem>Github</ListItem>
+          <ListItem>D</ListItem>
+          <ListItem>Tw</ListItem>
+          <ListItem>W</ListItem>
+          <ListItem>Git</ListItem>
         </List>
 
       </StyledFooter>
@@ -45,5 +45,5 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-    padding-left: 20px;
+    padding: 0px 20px;
 `;
