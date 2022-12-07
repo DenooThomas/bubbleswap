@@ -1,8 +1,9 @@
 import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
 import styled from 'styled-components';
-import ButtonGlow from 'assets/styling/button';
+import { ButtonGlow } from 'assets/styling/button';
 import bubble from 'assets/images/bubble.png';
+import tickerImg from 'assets/images/ticker.png';
 
 function BubbleWhy() {
   return (
@@ -17,7 +18,7 @@ function BubbleWhy() {
         <ButtonGlow type="button">Join discord</ButtonGlow>
       </LeftCont>
       <HalfCont>
-        <Bubble />
+        <Bubble src={tickerImg} alt="Bubble ticker $BUB" />
         <SubText>
           Vote for the future of Bubble and submit your proposals.
           Together, the community has ownership over the treasury and
@@ -32,7 +33,7 @@ function BubbleWhy() {
 export default BubbleWhy;
 
 const Wrapper = styled.div`
-  ${flexRow('nowrap', 'center', 'center')};
+  ${flexRow('nowrap', 'center', 'flex-end')};
   position: relative;
   margin-bottom: 12rem;
   padding: 0 5rem;
@@ -42,7 +43,7 @@ const Wrapper = styled.div`
     position: absolute;
     left: 30px;
     right: 50px;
-    top: -100px;
+    top: 0px;
     bottom: -150px;
     z-index: 1;
     transform: skew(-10deg) rotate(-10deg);
@@ -53,7 +54,7 @@ const Wrapper = styled.div`
 `;
 
 const HalfCont = styled.div`
-  ${flexColumn('nowrap', 'space-around', 'flex-start')};
+  ${flexColumn('nowrap', 'space-between', 'flex-start')};
   flex-basis: 50%;
   z-index: 2; 
   padding: 40px;
@@ -88,15 +89,8 @@ const SubText = styled.p`
   font-size: 0.9rem;
 `;
 
-const Bubble = styled.div`
-  width: 100%;
-  height: 350px;  
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+const Bubble = styled.img`
+  height: 500x;  
 `;
 
 const BubbleRight = styled.img`

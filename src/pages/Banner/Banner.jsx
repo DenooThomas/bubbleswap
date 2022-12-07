@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
 import { flexColumn, flexRow } from 'assets/styling/flexer';
-import ButtonGlow from 'assets/styling/button';
+import { ButtonGlow } from 'assets/styling/button';
 import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
 import Navbar from './Navbar/Navbar';
 
@@ -33,7 +33,7 @@ export default Banner;
 const Wrapper = styled.div`
   ${flexColumn('nowrap', 'flex-start', 'center')};
   width: 100%;
-  height: 100vh;
+  margin-bottom: 6rem;
 `;
 
 const Title = styled.h1`
