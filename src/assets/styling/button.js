@@ -1,9 +1,11 @@
+import Colors from 'assets/styling/colors';
 import styled from 'styled-components';
 
-const ButtonGlow = styled.button`
+export const ButtonGlow = styled.button`
     width: 200px;
     height: 50px;
     border: none;
+    color: ${({ dark }) => (dark ? Colors.black : Colors.white)};
     border-radius: 1.1rem;
     padding: 5px 35px;
     background: rgb(241,83,174);
@@ -14,4 +16,6 @@ const ButtonGlow = styled.button`
     letter-spacing: 1.7px;
 `;
 
-export default ButtonGlow;
+export const ButtonGlowWide = styled(ButtonGlow)`
+    width: 275px;
+`;
