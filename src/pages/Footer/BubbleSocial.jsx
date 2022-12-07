@@ -2,11 +2,14 @@ import { flexRow } from 'assets/styling/flexer';
 import React from 'react';
 import styled from 'styled-components';
 import BubbleTitleImg from 'assets/images/BubbleSocial/BubbleTitle.png';
+// import BubbleImg from 'assets/images/bubble_small.png';
 
 function BubbleSocial() {
   return (
     <Wrapper>
-      <BubbleTitle src={BubbleTitleImg} alt="Bubble title" />
+      <BubbleCont>
+        <BubbleTitle src={BubbleTitleImg} alt="Bubble title" />
+      </BubbleCont>
     </Wrapper>
   );
 }
@@ -17,6 +20,10 @@ const Wrapper = styled.div`
     ${flexRow('nowrap', 'center', 'center')};
     width: 100%;
     height: 600px;
+`;
+
+const BubbleCont = styled.div`
+    position: relative;
 `;
 
 const BubbleTitle = styled.img`

@@ -4,6 +4,10 @@ import styled from 'styled-components';
 import { ButtonGlow } from 'assets/styling/button';
 import bubble from 'assets/images/bubble.png';
 import tickerImg from 'assets/images/ticker.png';
+import {
+  Title, SubTitle, Text, SubText,
+} from 'assets/styling/text';
+import { ShadePseudo } from 'assets/styling/backgrounds';
 
 function BubbleWhy() {
   return (
@@ -37,20 +41,7 @@ const Wrapper = styled.div`
   position: relative;
   margin-bottom: 12rem;
   padding: 0 5rem;
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 30px;
-    right: 50px;
-    top: 0px;
-    bottom: -150px;
-    z-index: 1;
-    transform: skew(-10deg) rotate(-10deg);
-    border-radius: 2rem;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(110,110,110,0.01) 0%, rgba(0,0,0,0) 80%);
-  }
+  ${ShadePseudo}
 `;
 
 const HalfCont = styled.div`
@@ -66,27 +57,6 @@ const HalfCont = styled.div`
 
 const LeftCont = styled(HalfCont)`
   height: 50%;
-`;
-
-const Title = styled.h1`
-  width: 100%;
-  font-weight: 200;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-`;
-
-const SubTitle = styled.h2`
-  font-size: 2.2rem;
-  letter-spacing: 1px;
-`;
-
-const Text = styled.p`
-  text-align: justify;
-`;
-
-const SubText = styled.p`
-  font-size: 0.9rem;
 `;
 
 const Bubble = styled.img`

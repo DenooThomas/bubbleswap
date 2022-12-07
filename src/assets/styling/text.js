@@ -4,7 +4,7 @@ import Colors from 'assets/styling/colors';
 export const Title = styled.h1`
   color: ${({ dark }) => (dark ? Colors.black : Colors.white)};
   width: 100%;
-  font-size: 2rem;
+  font-size: ${({ large }) => (large ? '3.5rem' : '2rem')};
   font-weight: ${({ bold }) => (bold ? 'bold' : 200)};
   text-transform: uppercase;
   text-align: ${({ center }) => (center ? 'center' : 'left')};
@@ -27,4 +27,8 @@ export const Intro = styled.p`
 export const Text = styled.p`
   color: ${({ dark }) => (dark ? Colors.black : Colors.white)};
   text-align: justify;
+`;
+
+export const SubText = styled.p`
+  font-size: 0.9rem;
 `;
