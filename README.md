@@ -1,5 +1,6 @@
 # BubbleSwap
-![QuizApp](https://user-images.githubusercontent.com/110465703/204332164-5a1f6c9a-4067-4fe1-af9e-ead0f2889369.png)
+![BubbleSwapHome](https://user-images.githubusercontent.com/110465703/206206024-7989e600-1d34-459b-91bd-6caba6f42c84.png)
+
 [UNDER CONSTRUCTION] - Dummy website inspired by upcoming project BubbleSwap (website coming soon).
 
 
