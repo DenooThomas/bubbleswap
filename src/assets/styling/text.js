@@ -7,6 +7,7 @@ export const Title = styled.h1`
   font-size: 2rem;
   font-weight: ${({ bold }) => (bold ? 'bold' : 200)};
   text-transform: uppercase;
+  text-align: ${({ center }) => (center ? 'center' : 'left')};
   letter-spacing: 0.8px;
 `;
 

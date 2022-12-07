@@ -6,7 +6,7 @@ import Colors from 'assets/styling/colors';
 
 export default function BubbleContract() {
   return (
-    <div>
+    <Wrapper>
       <TopCont>
         <BubbleTitle src={ContractImg} alt="Bubble contract" />
         <Hyperlink>Check our audit</Hyperlink>
@@ -29,10 +29,12 @@ export default function BubbleContract() {
           <p>SAFU</p>
         </Item>
       </ItemCont>
-    </div>
+    </Wrapper>
   );
 }
-
+const Wrapper = styled.div`
+  margin-bottom: 6rem;
+`;
 const TopCont = styled.div`
     ${flexRow('nowrap', 'space-between', 'flex-end')};
     height: 300px;
@@ -40,12 +42,14 @@ const TopCont = styled.div`
 `;
 
 const BubbleTitle = styled.img`
-    margin-bottom: -6rem;
+    padding-left: 12rem;
+    margin-bottom: -7rem;
     z-index: 2;
 `;
 
 const Hyperlink = styled.span`
-    padding: 20px;
+    padding-bottom: 40px;
+    padding-right:  60px;
 `;
 
 const ItemCont = styled.div`
