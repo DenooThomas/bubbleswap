@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { flexRow } from 'assets/styling/flexer';
+import Colors from 'assets/styling/colors';
 import logo from 'assets/images/logo.png';
 
 function Navbar() {
@@ -51,6 +52,7 @@ const NavItem = styled.li`
 `;
 
 const Signup = styled.button`
+  color: ${Colors.white};
   text-transform: uppercase;
   z-index: 2;
   height: 40px;

@@ -12,15 +12,15 @@ function Banner() {
     <>
       <Navbar />
       <Wrapper>
-        <Title center bold large>Bubble liquid dex trading</Title>
-        <BannerContent>
+        <StyledTitle center bold large>Bubble liquid dex trading</StyledTitle>
+        <SubTitleContent>
           <SubTitle>
             Bubble generates deeper liquidity for optimal trading experience.
             Liquidity is secured by perpetually burning LP tokens
             and + and incentivizing higher rewards for LP providers.
           </SubTitle>
           <ButtonGlow type="button">Join presale</ButtonGlow>
-        </BannerContent>
+        </SubTitleContent>
         <BubbleAnimation />
         <BubbleLeft src={bubble} alt="bubble" />
         <BubbleRight src={bubble} alt="bubble" />
@@ -37,12 +37,19 @@ const Wrapper = styled.div`
   margin-bottom: 6rem;
 `;
 
-const BannerContent = styled.div`
+const StyledTitle = styled(Title)`
+  margin-bottom: 2rem;
+`;
+
+const SubTitleContent = styled.div`
   ${flexRow('nowrap', 'center', 'center')};
   width: 100%;
   height: 75px;
   margin-bottom: 2rem;
-  z-index: 2;
+
+  @media (min-width: 744px){
+    ${flexRow('wrap', 'center', 'center')};
+  }
 `;
 
 const SubTitle = styled.h2`
@@ -54,6 +61,7 @@ const SubTitle = styled.h2`
   font-weight: 200;
   text-align: center;
   margin-right: 1.5rem;
+
 `;
 
 const BubbleLeft = styled.img`

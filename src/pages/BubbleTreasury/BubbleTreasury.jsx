@@ -12,7 +12,7 @@ function BubbleTreasury() {
     <Wrapper>
       <StyledTitle center bold large>Bubble treasury</StyledTitle>
       <Wallet>
-        <StyledSubTitle>All wallets are protected through safe multisig wallts</StyledSubTitle>
+        <StyledSubTitle>All wallets are protected through safe multisig wallets</StyledSubTitle>
         <WalletItem>
           <WalletBubble />
           <WalletIcon src={WalletImg} alt="Wallet icon" />

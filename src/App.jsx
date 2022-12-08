@@ -1,6 +1,6 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import Colors from 'assets/styling/colors';
+import styled from 'styled-components';
+import { GlobalStyle, BodyOverflow } from 'assets/styling/globalStyle';
 import Banner from 'pages/Banner/Banner';
 import BubblyWhy from 'pages/BubbleWhy/BubbleWhy';
 import BubbleDao from 'pages/BubbleDao/BubbleDao';
@@ -30,25 +30,6 @@ function App() {
 }
 
 export default App;
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    color: ${Colors.white};
-    list-style-type: none;
-    z-index: 2;
-  }
-`;
-
-const BodyOverflow = createGlobalStyle`
- body {
-  overflow-x: hidden;
-  background-color: ${Colors.black};
- }
-`;
 
 const Wrapper = styled.div`
   width: 100%;
