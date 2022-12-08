@@ -33,18 +33,8 @@ export const Intro = styled.p`
 export const Text = styled.p`
   color: ${({ dark }) => (dark ? Colors.black : Colors.white)};
   text-align: justify;
-
-  @media ${device.tablet} {
-    text-align: center;
-    text-justify: inter-word;
-  }
 `;
 
 export const SubText = styled.p`
   font-size: 0.9rem;
-
-  @media ${device.tablet} {
-    text-align: center;
-    text-justify: inter-word;
-  }
 `;

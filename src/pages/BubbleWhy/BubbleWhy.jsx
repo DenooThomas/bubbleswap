@@ -16,19 +16,19 @@ function BubbleWhy() {
       <StyledHalfCont>
         <Title>Why bubble?</Title>
         <SubTitle>$BUB - governance & utility token</SubTitle>
-        <Text>
+        <StyledText>
           $BUB Earning and governance made simple.
           Delegating power to the community in an open DeFi protocol.
-        </Text>
+        </StyledText>
         <ButtonGlow type="button">Join discord</ButtonGlow>
       </StyledHalfCont>
       <HalfCont>
         <BubbleTicker src={tickerImg} alt="Bubble ticker $BUB" />
-        <SubText>
+        <StyledSubText>
           Vote for the future of Bubble and submit your proposals.
           Together, the community has ownership over the treasury and
           on top of that passive income earnings based on generated revenue.
-        </SubText>
+        </StyledSubText>
       </HalfCont>
       <BubbleRight src={bubble} alt="bubble" />
     </Wrapper>
@@ -40,8 +40,22 @@ export default BubbleWhy;
 const Wrapper = styled.div`
   ${flexRow('wrap', 'center', 'flex-end')};
   position: relative;
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
   ${ShadePseudo}
+`;
+
+const StyledText = styled(Text)`
+  @media ${device.tablet} {
+    text-align: center;
+    text-justify: inter-word;
+  }
+`;
+
+const StyledSubText = styled(SubText)`
+  @media ${device.tablet} {
+    text-align: center;
+    text-justify: inter-word;
+  }
 `;
 
 const HalfCont = styled.div`
