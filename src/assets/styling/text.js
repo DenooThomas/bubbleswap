@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Colors from 'assets/styling/colors';
+import device from './breakpoints';
 
 export const Title = styled.h1`
   color: ${({ dark }) => (dark ? Colors.black : Colors.white)};
@@ -9,6 +10,10 @@ export const Title = styled.h1`
   text-transform: uppercase;
   text-align: ${({ center }) => (center ? 'center' : 'left')};
   letter-spacing: 0.8px;
+
+  @media ${device.tablet} {
+    text-align: center;
+  }
 `;
 
 export const SubTitle = styled.h2`
@@ -28,8 +33,18 @@ export const Intro = styled.p`
 export const Text = styled.p`
   color: ${({ dark }) => (dark ? Colors.black : Colors.white)};
   text-align: justify;
+
+  @media ${device.tablet} {
+    text-align: center;
+    text-justify: inter-word;
+  }
 `;
 
 export const SubText = styled.p`
   font-size: 0.9rem;
+
+  @media ${device.tablet} {
+    text-align: center;
+    text-justify: inter-word;
+  }
 `;

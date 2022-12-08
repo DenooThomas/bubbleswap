@@ -8,11 +8,12 @@ import {
   Title, SubTitle, Text, SubText,
 } from 'assets/styling/text';
 import { ShadePseudo } from 'assets/styling/backgrounds';
+import device from 'assets/styling/breakpoints';
 
 function BubbleWhy() {
   return (
     <Wrapper>
-      <LeftCont>
+      <StyledHalfCont>
         <Title>Why bubble?</Title>
         <SubTitle>$BUB - governance & utility token</SubTitle>
         <Text>
@@ -20,9 +21,9 @@ function BubbleWhy() {
           Delegating power to the community in an open DeFi protocol.
         </Text>
         <ButtonGlow type="button">Join discord</ButtonGlow>
-      </LeftCont>
+      </StyledHalfCont>
       <HalfCont>
-        <Bubble src={tickerImg} alt="Bubble ticker $BUB" />
+        <BubbleTicker src={tickerImg} alt="Bubble ticker $BUB" />
         <SubText>
           Vote for the future of Bubble and submit your proposals.
           Together, the community has ownership over the treasury and
@@ -37,30 +38,34 @@ function BubbleWhy() {
 export default BubbleWhy;
 
 const Wrapper = styled.div`
-  ${flexRow('nowrap', 'center', 'flex-end')};
+  ${flexRow('wrap', 'center', 'flex-end')};
   position: relative;
   margin-bottom: 12rem;
-  padding: 0 5rem;
   ${ShadePseudo}
 `;
 
 const HalfCont = styled.div`
   ${flexColumn('nowrap', 'space-between', 'flex-start')};
-  flex-basis: 50%;
+  flex: 1;
   z-index: 2; 
   padding: 40px;
 
   & * {
     margin-bottom: 1.5rem;
   }
+
+  @media ${device.tablet} {
+    ${flexColumn('nowrap', 'space-between', 'center')};
+    padding: 0;
+  }
 `;
 
-const LeftCont = styled(HalfCont)`
+const StyledHalfCont = styled(HalfCont)`
   height: 50%;
 `;
 
-const Bubble = styled.img`
-  height: 500x;  
+const BubbleTicker = styled.img`
+  max-width: 500px;
 `;
 
 const BubbleRight = styled.img`
