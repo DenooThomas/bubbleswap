@@ -33,7 +33,6 @@ const Header = styled.div`
   width: 100%;
   height: ${headerHeight};
   padding: 10px 20px;
-  margin-bottom: 1rem;
 `;
 
 const Logo = styled.img`
@@ -41,7 +40,7 @@ const Logo = styled.img`
 `;
 
 const Nav = styled.nav`
-  ${flexRow('nowrap', 'space-between', 'center')};
+  ${flexRow('wrap', 'space-between', 'center')};
   height: 60px;
 `;
 

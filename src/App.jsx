@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GlobalStyle, BodyOverflow } from 'assets/styling/globalStyle';
+import GlobalStyle from 'assets/styling/globalStyle';
 import Banner from 'pages/Banner/Banner';
 import BubblyWhy from 'pages/BubbleWhy/BubbleWhy';
 import BubbleDao from 'pages/BubbleDao/BubbleDao';
@@ -14,7 +14,6 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <BodyOverflow />
       <Banner />
       <Wrapper>
         <BubblyWhy />

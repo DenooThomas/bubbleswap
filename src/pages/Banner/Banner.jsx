@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
 import { flexColumn, flexRow } from 'assets/styling/flexer';
 import { ButtonGlow } from 'assets/styling/button';
-import { Title } from 'assets/styling/text';
-import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
+import { Title, SubTitle } from 'assets/styling/text';
+// import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
+import BubbleSwapImg from 'assets/images/BubbleSwap.png';
 import Navbar from './Navbar/Navbar';
 
 function Banner() {
@@ -14,14 +15,15 @@ function Banner() {
       <Wrapper>
         <StyledTitle center bold large>Bubble liquid dex trading</StyledTitle>
         <SubTitleContent>
-          <SubTitle>
+          <StyledSubTitle>
             Bubble generates deeper liquidity for optimal trading experience.
             Liquidity is secured by perpetually burning LP tokens
             and + and incentivizing higher rewards for LP providers.
-          </SubTitle>
+          </StyledSubTitle>
           <ButtonGlow type="button">Join presale</ButtonGlow>
+          {/* <BubbleAnimation /> */}
         </SubTitleContent>
-        <BubbleAnimation />
+        <BubbleSwap src={BubbleSwapImg} alt="Bubble swap header" />
         <BubbleLeft src={bubble} alt="bubble" />
         <BubbleRight src={bubble} alt="bubble" />
       </Wrapper>
@@ -34,34 +36,38 @@ export default Banner;
 const Wrapper = styled.div`
   ${flexColumn('nowrap', 'flex-start', 'center')};
   width: 100%;
+  padding: 0 4rem;
   margin-bottom: 6rem;
 `;
 
 const StyledTitle = styled(Title)`
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 const SubTitleContent = styled.div`
-  ${flexRow('nowrap', 'center', 'center')};
+  ${flexRow('wrap', 'center', 'center')};
   width: 100%;
-  height: 75px;
   margin-bottom: 2rem;
+`;
 
-  @media (min-width: 744px){
-    ${flexRow('wrap', 'center', 'center')};
+const StyledSubTitle = styled(SubTitle)`
+  max-width: 795px;
+  font-size: 1rem;
+  text-align: center;
+  text-justify: inter-word;
+  margin-bottom: 1rem;
+
+  @media (min-width: 1024px){
+    margin-right: 1.5rem;
   }
 `;
 
-const SubTitle = styled.h2`
-  max-width: 700px;
-  text-align: justify;
-  display: inline-block;
-  vertical-align: center;
-  font-size: 1rem;
-  font-weight: 200;
-  text-align: center;
-  margin-right: 1.5rem;
+const BubbleSwap = styled.img`
+  width: 600px;
 
+  @media (min-width: 744px){
+    width: auto;
+  }
 `;
 
 const BubbleLeft = styled.img`
