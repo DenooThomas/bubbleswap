@@ -3,16 +3,17 @@ import React from 'react';
 import styled from 'styled-components';
 import ContractImg from 'assets/images/BubbleContract/contract.png';
 import Colors from 'assets/styling/colors';
+import device from 'assets/styling/breakpoints';
 
 export default function BubbleContract() {
   return (
     <Wrapper>
       <TopCont>
-        <BubbleTitle src={ContractImg} alt="Bubble contract" />
         <Hyperlink>Check our audit</Hyperlink>
       </TopCont>
       <ItemCont>
         <Item>
+          <ContractBubble src={ContractImg} alt="Bubble contract" />
           <h1>5%</h1>
           <p>Liquidity tax on all transactions</p>
         </Item>
@@ -41,10 +42,16 @@ const TopCont = styled.div`
     width: 100%;
 `;
 
-const BubbleTitle = styled.img`
-    padding-left: 12rem;
-    margin-bottom: -7rem;
+const ContractBubble = styled.img`
+    position: absolute;
     z-index: 2;
+    left: 100px;
+    top: -200px;
+
+  @media ${device.tablet} {
+    left: 0px;
+    top: -200px;
+  }
 `;
 
 const Hyperlink = styled.span`
@@ -54,16 +61,27 @@ const Hyperlink = styled.span`
 
 const ItemCont = styled.div`
     ${flexRow('nowrap', 'center', 'center')};
-    width: 100%;
-    height: 200px;
+
+    @media ${device.tablet} {
+      ${flexRow('wrap', 'center', 'center')};
+    }
 `;
 
 const Item = styled.div`
     ${flexColumn('nowrap', 'center', 'center')};
-    flex: 1;
-    height: 100%;
+    height: 188px;
     border-radius: 1rem;
     border: none;
     background-color: ${Colors.glass};
     margin: 1px;
+    position: relative;
+    flex: 1;
+
+    @media ${device.tablet} {
+      flex: 49%;
+    }
+
+    @media ${device.mobile} {
+      flex: 100%;
+    }
 `;

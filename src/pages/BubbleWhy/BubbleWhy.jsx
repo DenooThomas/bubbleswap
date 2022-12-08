@@ -14,7 +14,7 @@ function BubbleWhy() {
   return (
     <Wrapper>
       <StyledHalfCont>
-        <Title>Why bubble?</Title>
+        <StyledTitle>Why bubble?</StyledTitle>
         <SubTitle>$BUB - governance & utility token</SubTitle>
         <StyledText>
           $BUB Earning and governance made simple.
@@ -42,6 +42,12 @@ const Wrapper = styled.div`
   position: relative;
   margin-bottom: 6rem;
   ${ShadePseudo}
+`;
+
+const StyledTitle = styled(Title)`
+  @media ${device.tablet} {
+    text-align: center;
+  }
 `;
 
 const StyledText = styled(Text)`

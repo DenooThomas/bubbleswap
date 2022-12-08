@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Title } from 'assets/styling/text';
-import diagramImg from 'assets/images/BubbleNomics/diagram.png';
+import DiagramImg from 'assets/images/BubbleNomics/diagram.png';
+import { flexRow } from 'assets/styling/flexer';
+import device from 'assets/styling/breakpoints';
 
 function BubbleNomics() {
   return (
     <Wrapper>
       <StyledTitle>Tokenomics</StyledTitle>
-      <Diagram src={diagramImg} alt="Diagram roadmap" />
+      <Diagram src={DiagramImg} alt="Diagram roadmap" />
     </Wrapper>
   );
 }
@@ -15,13 +17,14 @@ function BubbleNomics() {
 export default BubbleNomics;
 
 const Wrapper = styled.div`
-    width: 100%;
-    position: relative;
-    padding: 0px 150px;
-    background: rgba(20, 27, 34, 0.93);
-    backdrop-filter: blur(25px);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+  ${flexRow('nowrap', 'center', 'center')};
+  width: 100%;
+  position: relative;
+  padding: 0px 150px;
+  background: rgba(20, 27, 34, 0.93);
+  backdrop-filter: blur(25px);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 `;
 
 const StyledTitle = styled(Title)`
@@ -31,5 +34,9 @@ const StyledTitle = styled(Title)`
 `;
 
 const Diagram = styled.img`
-    width: 100%;
+  max-width: 1000px;
+
+  @media ${device.tablet} {
+      max-width: 640px;
+    }
 `;

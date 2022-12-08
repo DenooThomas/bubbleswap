@@ -6,6 +6,7 @@ import WalletImg from 'assets/images/BubbleTreasury/wallet.png';
 import { SubTitle, Title, Text } from 'assets/styling/text';
 import { GlassBackground, ShadePseudo } from 'assets/styling/backgrounds';
 import BubbleDefault from 'assets/styling/bubble';
+import device from 'assets/styling/breakpoints';
 
 function BubbleTreasury() {
   return (
@@ -44,8 +45,12 @@ const Wrapper = styled.div`
 
 const Wallet = styled.div`
   ${flexColumn('nowrap', 'center', 'flex-end')}
-  margin-top: 60px;
-  padding: 0 20px;
+  margin-top: 2rem;
+  padding: 0 1rem;
+
+  @media ${device.tablet} {
+    margin-bottom: 1rem;
+  }
 `;
 
 const WalletItem = styled.div`
@@ -72,7 +77,7 @@ const WalletBubble = styled(BubbleDefault)`
 `;
 
 const StyledTitle = styled(Title)`
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 `;
 
 const StyledSubTitle = styled(SubTitle)`

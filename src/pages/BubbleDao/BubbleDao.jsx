@@ -39,7 +39,6 @@ export default BubbleDao;
 const Wrapper = styled.div`
     ${flexColumn('nowrap', 'flex-start', 'flex-start')};
     position: relative;
-    padding: 0 5rem;
     margin-bottom: 6rem;
 `;
 
