@@ -2,6 +2,7 @@ import { flexRow } from 'assets/styling/flexer';
 import React from 'react';
 import styled from 'styled-components';
 import BubbleTitleImg from 'assets/images/BubbleSocial/BubbleTitle.png';
+import device from 'assets/styling/breakpoints';
 // import BubbleImg from 'assets/images/bubble_small.png';
 
 function BubbleSocial() {
@@ -27,5 +28,9 @@ const BubbleCont = styled.div`
 `;
 
 const BubbleTitle = styled.img`
-    max-width: 900px;
+    max-width: 80vw;
+
+    @media ${device.tablet} {
+      max-width: 90vw;
+    }
 `;

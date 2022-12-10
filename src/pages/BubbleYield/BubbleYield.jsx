@@ -5,6 +5,7 @@ import { ButtonGlowWide } from 'assets/styling/button';
 import MoneyImg from 'assets/images/money.png';
 import { Title, Intro, Text } from 'assets/styling/text';
 import Colors from 'assets/styling/colors';
+import device from 'assets/styling/breakpoints';
 
 function BubbleYield() {
   return (
@@ -24,7 +25,7 @@ function BubbleYield() {
           </Text>
           <ButtonGlowWide>Start earning yield</ButtonGlowWide>
         </HalfCont>
-        <img src={MoneyImg} alt="Bag of Bubble tokens" />
+        <Money src={MoneyImg} alt="Bag of Bubble tokens" />
       </TopCont>
       <LeftCont>
         <Title dark bold>Synthetic yield farming</Title>
@@ -62,36 +63,73 @@ export default BubbleYield;
 
 const Wrapper = styled.div`
   ${flexRow('wrap', 'center', 'center')};
-  width: 100%;
+  padding: 0 4rem;
+  margin-bottom: 3rem;
+
+  @media ${device.tablet}{
+    padding: 0;
+  }
 `;
 
 const Cont = styled.div`
-  height: 475px;
+  min-height: 50vh;
   margin: 1px;
-  background-color: white;
+  background-color: ${Colors.white};
   border-radius: 1.1rem;
   border: none;
-  padding: 80px;
+  padding: 5rem 4.5rem;
+
+  @media ${device.tablet} {
+    padding: 3.5rem 3rem;
+    border-radius: 0;
+  }
 `;
 
 const TopCont = styled(Cont)`
   ${flexRow('nowrap', 'space-between', 'center')};
   flex: 1 100%;
   background-color: ${Colors.glass};
+  @media ${device.tablet} {
+    ${flexColumn('nowrap', 'space-between', 'center')};
+  }
 `;
 
 const HalfCont = styled.div`
   ${flexColumn('nowrap', 'space-between', 'flex-start')};
-  width: 50%;
-  height: 100%;
+  height: 40vh;
+
+  @media ${device.tablet} {
+    ${flexColumn('nowrap', 'space-between', 'center')};
+    margin-bottom: 2rem;
+  }
+`;
+
+const Money = styled.img`
+  width: 30vw;
+
+  @media ${device.tablet} {
+    width: 50vw;
+  }
 `;
 
 const LeftCont = styled(Cont)`
   ${flexColumn('nowrap', 'space-between', 'flex-start')};
+  height: 50vh;
   flex: 0.75;
+
+  @media ${device.tablet} {
+    flex: 1 100%;
+    height: 330px
+  }
 `;
 
 const RightCont = styled(Cont)`
   ${flexColumn('nowrap', 'space-between', 'flex-start')};
+  height: 50vh;
   flex: 1;
+
+  @media ${device.tablet} {
+    flex: 1 100%;
+    height: 330px
+  }
 `;

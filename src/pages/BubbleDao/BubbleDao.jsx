@@ -4,13 +4,14 @@ import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
 import BubbleDaoImg from 'assets/images/BubbleDao.png';
 import { SubTitle, Text } from 'assets/styling/text';
+import device from 'assets/styling/breakpoints';
 
 function BubbleDao() {
   return (
     <Wrapper>
-      <BubbleTitle>
-        <img src={BubbleDaoImg} alt="Bubble Dao header" />
-      </BubbleTitle>
+      <BubbleHeader>
+        <DaoBubble src={BubbleDaoImg} alt="Bubble Dao header" />
+      </BubbleHeader>
       <StyledSubTitle>
         We believe that the Bubble organization can achieve great success through
         a DAO governance model.
@@ -37,36 +38,58 @@ export default BubbleDao;
 
 const Wrapper = styled.div`
     ${flexColumn('nowrap', 'flex-start', 'flex-start')};
-    height: 100vh;
     position: relative;
-    padding: 0 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
 `;
 
-const BubbleTitle = styled.div`
-    ${flexRow('nowrap', 'flex-end', 'center')};
+const BubbleHeader = styled.div`
+    ${flexRow('nowrap', 'center', 'center')};
     z-index: 2;
     width: 100%;
     height: 400px;
-    padding-right: 150px;
     margin-top: -4rem;
     margin-bottom: 1.5rem;
+
+    @media ${device.tablet} {
+      margin-bottom: 0;
+    }
+`;
+
+const DaoBubble = styled.img`
+  width: auto;
+
+  @media ${device.tablet} {
+    width: 90vw;
+  }
 `;
 
 const StyledSubTitle = styled(SubTitle)`
-    width: 575px;
+    width: 60vw;
     font-size: 1.8rem;
+    padding-bottom: 1rem;
+
+    @media ${device.tablet} {
+      width: 75vw;
+    }
 `;
 
 const TextCont = styled.div`
     ${flexRow('nowrap', 'center', 'center')};
+
+    @media ${device.tablet} {
+    ${flexColumn('nowrap', 'space-between', 'flex-start')};
+  }
 `;
 
 const StyledText = styled(Text)`
-    flex-basis: 50%;
+    flex: 1;
     padding: 3rem;
-    padding-left: 2rem;
-    padding-right: 6rem;
+    min-width: 26vw;
+
+    @media ${device.tablet} {
+    padding: 1rem;
+    padding-left: 0;
+  }
 `;
 
 const BubbleRight = styled.img`
@@ -75,4 +98,8 @@ const BubbleRight = styled.img`
   right: -550px;
   transform: rotate(-15deg);
   z-index: 1;
+
+  @media ${device.tablet} {
+    width: 950px;
+  }
 `;

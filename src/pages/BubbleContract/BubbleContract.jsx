@@ -3,12 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 import ContractImg from 'assets/images/BubbleContract/contract.png';
 import Colors from 'assets/styling/colors';
+import device from 'assets/styling/breakpoints';
 
 export default function BubbleContract() {
   return (
     <Wrapper>
       <TopCont>
-        <BubbleTitle src={ContractImg} alt="Bubble contract" />
+        <ContractBubble src={ContractImg} alt="Bubble contract" />
         <Hyperlink>Check our audit</Hyperlink>
       </TopCont>
       <ItemCont>
@@ -37,33 +38,54 @@ const Wrapper = styled.div`
 `;
 const TopCont = styled.div`
     ${flexRow('nowrap', 'space-between', 'flex-end')};
-    height: 300px;
-    width: 100%;
+    height: 30vh;
+    width: 100vw;
+
+    @media ${device.width} {
+      ${flexColumn('nowrap', 'space-between', 'center')};
+    }
 `;
 
-const BubbleTitle = styled.img`
-    padding-left: 12rem;
-    margin-bottom: -7rem;
+const ContractBubble = styled.img`
+    width: 50vw;
+    max-width: 632px;
+    margin-bottom: -2rem;
     z-index: 2;
+
+  @media ${device.tablet}{
+    width: 90vw;
+  }
 `;
 
 const Hyperlink = styled.span`
-    padding-bottom: 40px;
-    padding-right:  60px;
+    padding-bottom: 2rem;
+    padding-right:  2rem;
+    
 `;
 
 const ItemCont = styled.div`
     ${flexRow('nowrap', 'center', 'center')};
-    width: 100%;
-    height: 200px;
+
+    @media ${device.tablet} {
+      ${flexRow('wrap', 'center', 'center')};
+    }
 `;
 
 const Item = styled.div`
     ${flexColumn('nowrap', 'center', 'center')};
-    flex: 1;
-    height: 100%;
+    height: 188px;
     border-radius: 1rem;
     border: none;
     background-color: ${Colors.glass};
     margin: 1px;
+    position: relative;
+    flex: 1;
+
+    @media ${device.tablet} {
+      flex: 49%;
+    }
+
+    @media ${device.mobile} {
+      flex: 100%;
+    }
 `;

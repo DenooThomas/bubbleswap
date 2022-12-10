@@ -6,13 +6,14 @@ import WalletImg from 'assets/images/BubbleTreasury/wallet.png';
 import { SubTitle, Title, Text } from 'assets/styling/text';
 import { GlassBackground, ShadePseudo } from 'assets/styling/backgrounds';
 import BubbleDefault from 'assets/styling/bubble';
+import device from 'assets/styling/breakpoints';
 
 function BubbleTreasury() {
   return (
     <Wrapper>
       <StyledTitle center bold large>Bubble treasury</StyledTitle>
       <Wallet>
-        <StyledSubTitle>All wallets are protected through safe multisig wallts</StyledSubTitle>
+        <StyledSubTitle>All wallets are protected through safe multisig wallets</StyledSubTitle>
         <WalletItem>
           <WalletBubble />
           <WalletIcon src={WalletImg} alt="Wallet icon" />
@@ -40,19 +41,28 @@ const Wrapper = styled.div`
   position: relative;
   margin-bottom: 6rem;
   ${ShadePseudo}
+
+  @media ${device.tablet} {
+    ${flexColumn('nowrap', 'space-between', 'center')};
+  }
 `;
 
 const Wallet = styled.div`
   ${flexColumn('nowrap', 'center', 'flex-end')}
-  margin-top: 60px;
-  padding: 0 20px;
+  margin-top: 2rem;
+  padding: 0 1rem;
+
+  @media ${device.tablet} {
+    ${flexColumn('nowrap', 'center', 'center')}
+    width: 80vw;
+    margin-bottom: 1rem;
+  }
 `;
 
 const WalletItem = styled.div`
   ${flexRow('nowrap', 'space-between', 'center')};
   position: relative;
-  padding: 20px;
-  padding-right: 20px;
+  padding: 1.2rem;
   ${GlassBackground};
   border-radius: 0.5rem;
   margin: 1px;
@@ -63,7 +73,14 @@ const WalletIcon = styled.img`
 `;
 
 const Diagram = styled.img`
-  max-width: 560px;
+  width: 50vw;
+
+  @media ${device.tablet} {
+    width: 80vw;
+  }
+  @media ${device.mobile} {
+    width: 90vw;
+  }
 `;
 
 const WalletBubble = styled(BubbleDefault)`
@@ -72,7 +89,7 @@ const WalletBubble = styled(BubbleDefault)`
 `;
 
 const StyledTitle = styled(Title)`
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 `;
 
 const StyledSubTitle = styled(SubTitle)`

@@ -8,26 +8,27 @@ import {
   Title, SubTitle, Text, SubText,
 } from 'assets/styling/text';
 import { ShadePseudo } from 'assets/styling/backgrounds';
+import device from 'assets/styling/breakpoints';
 
 function BubbleWhy() {
   return (
     <Wrapper>
-      <LeftCont>
-        <Title>Why bubble?</Title>
+      <StyledHalfCont>
+        <StyledTitle>Why bubble?</StyledTitle>
         <SubTitle>$BUB - governance & utility token</SubTitle>
-        <Text>
+        <StyledText>
           $BUB Earning and governance made simple.
           Delegating power to the community in an open DeFi protocol.
-        </Text>
+        </StyledText>
         <ButtonGlow type="button">Join discord</ButtonGlow>
-      </LeftCont>
+      </StyledHalfCont>
       <HalfCont>
-        <Bubble src={tickerImg} alt="Bubble ticker $BUB" />
-        <SubText>
+        <BubbleTicker src={tickerImg} alt="Bubble ticker $BUB" />
+        <StyledSubText>
           Vote for the future of Bubble and submit your proposals.
           Together, the community has ownership over the treasury and
           on top of that passive income earnings based on generated revenue.
-        </SubText>
+        </StyledSubText>
       </HalfCont>
       <BubbleRight src={bubble} alt="bubble" />
     </Wrapper>
@@ -37,30 +38,58 @@ function BubbleWhy() {
 export default BubbleWhy;
 
 const Wrapper = styled.div`
-  ${flexRow('nowrap', 'center', 'flex-end')};
+  ${flexRow('wrap', 'center', 'flex-end')};
   position: relative;
-  margin-bottom: 12rem;
-  padding: 0 5rem;
+  margin-bottom: 6rem;
   ${ShadePseudo}
+`;
+
+const StyledTitle = styled(Title)`
+  @media ${device.tablet} {
+    text-align: center;
+  }
+`;
+
+const StyledText = styled(Text)`
+  @media ${device.tablet} {
+    text-align: center;
+    text-justify: inter-word;
+  }
+`;
+
+const StyledSubText = styled(SubText)`
+  @media ${device.tablet} {
+    text-align: center;
+    text-justify: inter-word;
+  }
 `;
 
 const HalfCont = styled.div`
   ${flexColumn('nowrap', 'space-between', 'flex-start')};
-  flex-basis: 50%;
+  flex: 1;
   z-index: 2; 
   padding: 40px;
 
   & * {
     margin-bottom: 1.5rem;
   }
+
+  @media ${device.tablet} {
+    ${flexColumn('nowrap', 'space-between', 'center')};
+    padding: 0;
+  }
 `;
 
-const LeftCont = styled(HalfCont)`
+const StyledHalfCont = styled(HalfCont)`
   height: 50%;
 `;
 
-const Bubble = styled.img`
-  height: 500x;  
+const BubbleTicker = styled.img`
+  max-width: 500px;
+
+  @media ${device.tablet} {
+    width: 90vw;
+  }
 `;
 
 const BubbleRight = styled.img`

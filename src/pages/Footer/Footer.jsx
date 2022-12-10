@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { flexRow } from 'assets/styling/flexer';
 import Colors from 'assets/styling/colors';
+import device from 'assets/styling/breakpoints';
 import Panel from './Panel';
 import BubbleSocial from './BubbleSocial';
 
@@ -42,6 +43,10 @@ const StyledFooter = styled.footer`
 
 const List = styled.ul`
     ${flexRow('nowrap', 'space-between', 'center')};
+
+    @media ${device.tablet} {
+      ${flexRow('wrap', 'space-between', 'center')};
+    }
 `;
 
 const ListItem = styled.li`
