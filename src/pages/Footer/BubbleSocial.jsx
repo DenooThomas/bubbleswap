@@ -28,9 +28,9 @@ const BubbleCont = styled.div`
 `;
 
 const BubbleTitle = styled.img`
-    max-width: 900px;
+    max-width: 80vw;
 
     @media ${device.tablet} {
-      max-width: 700px;
+      max-width: 90vw;
     }
 `;

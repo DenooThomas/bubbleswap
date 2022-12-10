@@ -6,6 +6,7 @@ import { ButtonGlow } from 'assets/styling/button';
 import { Title, SubTitle } from 'assets/styling/text';
 // import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
 import BubbleSwapImg from 'assets/images/BubbleSwap.png';
+import device from 'assets/styling/breakpoints';
 import Navbar from './Navbar/Navbar';
 
 function Banner() {
@@ -25,7 +26,7 @@ function Banner() {
         </SubTitleContent>
         <BubbleSwap src={BubbleSwapImg} alt="Bubble swap header" />
         <BubbleLeft src={bubble} alt="bubble" />
-        <BubbleRight src={bubble} alt="bubble" />
+        <GlowRight src={bubble} alt="bubble" />
       </Wrapper>
     </>
   );
@@ -38,6 +39,7 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 0 4rem;
   margin-bottom: 6rem;
+  z-index: 10;
 `;
 
 const StyledTitle = styled(Title)`
@@ -45,9 +47,15 @@ const StyledTitle = styled(Title)`
 `;
 
 const SubTitleContent = styled.div`
-  ${flexRow('wrap', 'center', 'center')};
+  ${flexRow('nowrap', 'center', 'center')};
   width: 100%;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 10;
+
+  @media ${device.tablet} {
+    ${flexRow('wrap', 'center', 'center')};
+  }
 `;
 
 const StyledSubTitle = styled(SubTitle)`
@@ -55,18 +63,20 @@ const StyledSubTitle = styled(SubTitle)`
   font-size: 1rem;
   text-align: center;
   text-justify: inter-word;
-  margin-bottom: 1rem;
+  margin-right: 1.5rem;
 
-  @media (min-width: 1024px){
-    margin-right: 1.5rem;
+  @media ${device.tablet}{
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 `;
 
 const BubbleSwap = styled.img`
-  width: 600px;
+  width: 75vw;
+  z-index: 10;
 
-  @media (min-width: 744px){
-    width: auto;
+  @media ${device.tablet} {
+    width: 85vw;
   }
 `;
 
@@ -77,7 +87,7 @@ const BubbleLeft = styled.img`
   z-index: 1;
 `;
 
-const BubbleRight = styled.img`
+const GlowRight = styled.img`
   position: absolute;
   top: -580px;
   right: -570px;

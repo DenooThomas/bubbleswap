@@ -6,9 +6,18 @@ import styled from 'styled-components';
 
 function HamburgerMenu(props) {
   const { isOpen, setIsOpen } = props;
-  console.log(isOpen);
+
+  function toggleOpen() {
+    setIsOpen(!isOpen);
+    if (isOpen) {
+      document.body.removeAttribute('style');
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
   return (
-    <Hamburger onClick={() => setIsOpen(!isOpen)}>
+    <Hamburger onClick={() => toggleOpen()}>
       <StripeTop isOpen={isOpen} />
       <StripeMiddle isOpen={isOpen} />
       <StripeBottom isOpen={isOpen} />
@@ -25,6 +34,7 @@ const Hamburger = styled.div`
   ${flexColumn('nowrap', 'space-between', 'center')};
   width: ${hamburgerWidth};
   height: ${hamburgerHeight};
+  position: absolute;
   display: none;
   left: 2.2rem;
   top: 2.2rem;

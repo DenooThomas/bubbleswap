@@ -86,6 +86,10 @@ const StyledHalfCont = styled(HalfCont)`
 
 const BubbleTicker = styled.img`
   max-width: 500px;
+
+  @media ${device.tablet} {
+    width: 90vw;
+  }
 `;
 
 const BubbleRight = styled.img`

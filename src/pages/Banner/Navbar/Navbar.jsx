@@ -21,11 +21,13 @@ function Navbar() {
         <NavItem>Contract</NavItem>
         <NavItem>Protocol</NavItem>
         <NavItem>Tokenomics</NavItem>
+        <HamburgerPresaleButton>
+          Join presale
+        </HamburgerPresaleButton>
       </Nav>
-      <Signup>
+      <PresaleButton>
         Join presale
-      </Signup>
-      <FillerElement />
+      </PresaleButton>
     </Header>
   );
 }
@@ -36,8 +38,12 @@ const Header = styled.div`
   ${flexRow('nowrap', 'space-between', 'center')};
   width: 100vw;
   height: 100px;
-  padding: 0 20px;
+  padding: 0 4vw;
   position: relative;
+
+  @media ${device.tablet} {
+    ${flexRow('nowrap', 'center', 'center')};
+  }
 `;
 
 const Logo = styled.img`
@@ -45,21 +51,20 @@ const Logo = styled.img`
 `;
 
 const Nav = styled.nav`
-  ${flexRow('wrap', 'space-between', 'center')};
+  ${flexRow('nowrap', 'space-between', 'center')};
   position: relative;
   height: 60px;
-  z-index: 10;
 
   @media ${device.tablet} {
     ${flexColumn('nowrap', 'space-between', 'flex-start')};
-    height: 50vh;
-    width: 50vw;
+    height: 100vh;
+    width: 100vw;
     position: absolute;
     top: 0;
     left: ${({ isOpen }) => (isOpen ? '0px' : '100vw')};
-    padding: 10vh 5vw;
-    background-color: red;
-    z-index: 10;
+    padding: 10vh 6vw 25vh;
+    background-color: ${Colors.black};
+    z-index: 900;
   }
 `;
 
@@ -67,9 +72,13 @@ const NavItem = styled.li`
   padding: 0 20px;
   line-height: 60px;
   font-size: 0.8rem;
+
+  @media ${device.tablet} {
+    padding: 0;
+  }
 `;
 
-const Signup = styled.button`
+const PresaleButton = styled.button`
   color: ${Colors.white};
   text-transform: uppercase;
   z-index: 2;
@@ -87,7 +96,7 @@ const Signup = styled.button`
   }
 `;
 
-const FillerElement = styled.span`
+const HamburgerPresaleButton = styled(PresaleButton)`
   display: none;
 
   @media ${device.tablet} {

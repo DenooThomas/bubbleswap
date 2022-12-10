@@ -29,14 +29,18 @@ const Wrapper = styled.div`
 
 const StyledTitle = styled(Title)`
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 6rem;
+    left: 6rem;
+    @media ${device.tablet} {
+      top: 3rem;
+      left: 3rem;
+    }
 `;
 
 const Diagram = styled.img`
-  max-width: 1000px;
+  max-width: 80vw;
 
   @media ${device.tablet} {
-      max-width: 750px;
+      max-width: 90vw;
     }
 `;

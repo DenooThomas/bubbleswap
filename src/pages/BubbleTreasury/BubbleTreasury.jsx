@@ -41,6 +41,10 @@ const Wrapper = styled.div`
   position: relative;
   margin-bottom: 6rem;
   ${ShadePseudo}
+
+  @media ${device.tablet} {
+    ${flexColumn('nowrap', 'space-between', 'center')};
+  }
 `;
 
 const Wallet = styled.div`
@@ -49,6 +53,8 @@ const Wallet = styled.div`
   padding: 0 1rem;
 
   @media ${device.tablet} {
+    ${flexColumn('nowrap', 'center', 'center')}
+    width: 80vw;
     margin-bottom: 1rem;
   }
 `;
@@ -56,8 +62,7 @@ const Wallet = styled.div`
 const WalletItem = styled.div`
   ${flexRow('nowrap', 'space-between', 'center')};
   position: relative;
-  padding: 20px;
-  padding-right: 20px;
+  padding: 1.2rem;
   ${GlassBackground};
   border-radius: 0.5rem;
   margin: 1px;
@@ -68,7 +73,14 @@ const WalletIcon = styled.img`
 `;
 
 const Diagram = styled.img`
-  max-width: 560px;
+  width: 50vw;
+
+  @media ${device.tablet} {
+    width: 80vw;
+  }
+  @media ${device.mobile} {
+    width: 90vw;
+  }
 `;
 
 const WalletBubble = styled(BubbleDefault)`

@@ -9,11 +9,11 @@ export default function BubbleContract() {
   return (
     <Wrapper>
       <TopCont>
+        <ContractBubble src={ContractImg} alt="Bubble contract" />
         <Hyperlink>Check our audit</Hyperlink>
       </TopCont>
       <ItemCont>
         <Item>
-          <ContractBubble src={ContractImg} alt="Bubble contract" />
           <h1>5%</h1>
           <p>Liquidity tax on all transactions</p>
         </Item>
@@ -37,27 +37,30 @@ const Wrapper = styled.div`
   margin-bottom: 6rem;
 `;
 const TopCont = styled.div`
-    ${flexRow('nowrap', 'flex-end', 'flex-end')};
-    height: 300px;
-    width: 100%;
+    ${flexRow('nowrap', 'space-between', 'flex-end')};
+    height: 30vh;
+    width: 100vw;
+
+    @media ${device.width} {
+      ${flexColumn('nowrap', 'space-between', 'center')};
+    }
 `;
 
 const ContractBubble = styled.img`
-    position: absolute;
+    width: 50vw;
+    max-width: 632px;
+    margin-bottom: -2rem;
     z-index: 2;
-    left: 0px;
-    top: -225px;
 
-  @media ${device.tablet} {
-    width: 500px;
-    left: 0px;
-    top: -175px;
+  @media ${device.tablet}{
+    width: 90vw;
   }
 `;
 
 const Hyperlink = styled.span`
-    padding-bottom: 40px;
-    padding-right:  60px;
+    padding-bottom: 2rem;
+    padding-right:  2rem;
+    
 `;
 
 const ItemCont = styled.div`

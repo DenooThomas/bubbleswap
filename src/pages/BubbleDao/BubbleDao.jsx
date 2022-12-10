@@ -59,28 +59,32 @@ const DaoBubble = styled.img`
   width: auto;
 
   @media ${device.tablet} {
-    width: 600px;
+    width: 90vw;
   }
 `;
 
 const StyledSubTitle = styled(SubTitle)`
-    width: 575px;
+    width: 60vw;
     font-size: 1.8rem;
     padding-bottom: 1rem;
+
+    @media ${device.tablet} {
+      width: 75vw;
+    }
 `;
 
 const TextCont = styled.div`
     ${flexRow('nowrap', 'center', 'center')};
 
     @media ${device.tablet} {
-    ${flexRow('wrap', 'center', 'center')};
+    ${flexColumn('nowrap', 'space-between', 'flex-start')};
   }
 `;
 
 const StyledText = styled(Text)`
     flex: 1;
     padding: 3rem;
-    min-width: 350px;
+    min-width: 26vw;
 
     @media ${device.tablet} {
     padding: 1rem;

@@ -4,10 +4,10 @@ import Colors from './colors';
 
 const GlobalStyle = createGlobalStyle`
   * {
-    z-index: 2;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
   }
   body {
     font-family: 'Montserrat', sans-serif;

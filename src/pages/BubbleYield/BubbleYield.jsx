@@ -64,6 +64,7 @@ export default BubbleYield;
 const Wrapper = styled.div`
   ${flexRow('wrap', 'center', 'center')};
   padding: 0 4rem;
+  margin-bottom: 3rem;
 
   @media ${device.tablet}{
     padding: 0;
@@ -71,7 +72,7 @@ const Wrapper = styled.div`
 `;
 
 const Cont = styled.div`
-  height: 475px;
+  min-height: 50vh;
   margin: 1px;
   background-color: ${Colors.white};
   border-radius: 1.1rem;
@@ -88,22 +89,32 @@ const TopCont = styled(Cont)`
   ${flexRow('nowrap', 'space-between', 'center')};
   flex: 1 100%;
   background-color: ${Colors.glass};
+  @media ${device.tablet} {
+    ${flexColumn('nowrap', 'space-between', 'center')};
+  }
 `;
 
 const HalfCont = styled.div`
   ${flexColumn('nowrap', 'space-between', 'flex-start')};
-  height: 100%;
+  height: 40vh;
+
+  @media ${device.tablet} {
+    ${flexColumn('nowrap', 'space-between', 'center')};
+    margin-bottom: 2rem;
+  }
 `;
 
 const Money = styled.img`
+  width: 30vw;
+
   @media ${device.tablet} {
-    max-width: 300px;;
+    width: 50vw;
   }
 `;
 
 const LeftCont = styled(Cont)`
   ${flexColumn('nowrap', 'space-between', 'flex-start')};
-  height: 430px;
+  height: 50vh;
   flex: 0.75;
 
   @media ${device.tablet} {
@@ -114,7 +125,7 @@ const LeftCont = styled(Cont)`
 
 const RightCont = styled(Cont)`
   ${flexColumn('nowrap', 'space-between', 'flex-start')};
-  height: 430px;
+  height: 50vh;
   flex: 1;
 
   @media ${device.tablet} {
