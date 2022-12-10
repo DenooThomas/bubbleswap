@@ -72,7 +72,7 @@ const StyledSubTitle = styled(SubTitle)`
 `;
 
 const BubbleSwap = styled.img`
-  width: 75vw;
+  width: 55vw;
   z-index: 10;
 
   @media ${device.tablet} {

@@ -38,10 +38,9 @@ const Wrapper = styled.div`
 `;
 const TopCont = styled.div`
     ${flexRow('nowrap', 'space-between', 'flex-end')};
-    height: 30vh;
-    width: 100vw;
+    width: 100%;
 
-    @media ${device.width} {
+    @media ${device.tablet} {
       ${flexColumn('nowrap', 'space-between', 'center')};
     }
 `;
@@ -54,13 +53,14 @@ const ContractBubble = styled.img`
 
   @media ${device.tablet}{
     width: 90vw;
+    margin-bottom: 2rem;
   }
 `;
 
 const Hyperlink = styled.span`
     padding-bottom: 2rem;
     padding-right:  2rem;
-    
+    display: block;
 `;
 
 const ItemCont = styled.div`
