@@ -37,7 +37,7 @@ const Wrapper = styled.div`
   margin-bottom: 6rem;
 `;
 const TopCont = styled.div`
-    ${flexRow('nowrap', 'space-between', 'flex-end')};
+    ${flexRow('nowrap', 'flex-end', 'flex-end')};
     height: 300px;
     width: 100%;
 `;
@@ -45,12 +45,13 @@ const TopCont = styled.div`
 const ContractBubble = styled.img`
     position: absolute;
     z-index: 2;
-    left: 100px;
-    top: -200px;
+    left: 0px;
+    top: -225px;
 
   @media ${device.tablet} {
+    width: 500px;
     left: 0px;
-    top: -200px;
+    top: -175px;
   }
 `;
 

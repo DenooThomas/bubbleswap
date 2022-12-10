@@ -49,6 +49,10 @@ const BubbleHeader = styled.div`
     height: 400px;
     margin-top: -4rem;
     margin-bottom: 1.5rem;
+
+    @media ${device.tablet} {
+      margin-bottom: 0;
+    }
 `;
 
 const DaoBubble = styled.img`
@@ -92,6 +96,6 @@ const BubbleRight = styled.img`
   z-index: 1;
 
   @media ${device.tablet} {
-    width: 750px;
+    width: 950px;
   }
 `;

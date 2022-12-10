@@ -37,6 +37,6 @@ const Diagram = styled.img`
   max-width: 1000px;
 
   @media ${device.tablet} {
-      max-width: 640px;
+      max-width: 750px;
     }
 `;
