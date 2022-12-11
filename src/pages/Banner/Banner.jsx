@@ -5,6 +5,7 @@ import { flexColumn, flexRow } from 'assets/styling/flexer';
 import { ButtonGlow } from 'assets/styling/button';
 import { Title, SubTitle } from 'assets/styling/text';
 // import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
+import Wrapper from 'assets/styling/wrapper';
 import BubbleSwapImg from 'assets/images/BubbleSwap.png';
 import device from 'assets/styling/breakpoints';
 import Navbar from './Navbar/Navbar';
@@ -13,7 +14,7 @@ function Banner() {
   return (
     <>
       <Navbar />
-      <Wrapper>
+      <StyledWrapper>
         <StyledTitle center bold large>Bubble liquid dex trading</StyledTitle>
         <SubTitleContent>
           <StyledSubTitle>
@@ -27,23 +28,20 @@ function Banner() {
         <BubbleSwap src={BubbleSwapImg} alt="Bubble swap header" />
         <BubbleLeft src={bubble} alt="bubble" />
         <GlowRight src={bubble} alt="bubble" />
-      </Wrapper>
+      </StyledWrapper>
     </>
   );
 }
 
 export default Banner;
 
-const Wrapper = styled.div`
-  ${flexColumn('nowrap', 'flex-start', 'center')};
-  width: 100%;
-  padding: 0 4rem;
-  margin-bottom: 6rem;
-  z-index: 10;
+const StyledWrapper = styled(Wrapper)`
+  ${flexColumn('nowrap', 'flex-start', 'center')}; 
 `;
 
 const StyledTitle = styled(Title)`
   margin-bottom: 1rem;
+  z-index: 10;
 `;
 
 const SubTitleContent = styled.div`
@@ -72,7 +70,7 @@ const StyledSubTitle = styled(SubTitle)`
 `;
 
 const BubbleSwap = styled.img`
-  width: 75vw;
+  width: 65%;
   z-index: 10;
 
   @media ${device.tablet} {

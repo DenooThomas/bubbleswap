@@ -4,13 +4,15 @@ import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
 import BubbleDaoImg from 'assets/images/BubbleDao.png';
 import { SubTitle, Text } from 'assets/styling/text';
+import Wrapper from 'assets/styling/wrapper';
 import device from 'assets/styling/breakpoints';
 
 function BubbleDao() {
   return (
-    <Wrapper>
+    <StyledWrapper>
       <BubbleHeader>
         <DaoBubble src={BubbleDaoImg} alt="Bubble Dao header" />
+        <BubbleRight src={bubble} alt="bubble" />
       </BubbleHeader>
       <StyledSubTitle>
         We believe that the Bubble organization can achieve great success through
@@ -29,33 +31,29 @@ function BubbleDao() {
           within our organization.
         </StyledText>
       </TextCont>
-      <BubbleRight src={bubble} alt="bubble" />
-    </Wrapper>
+    </StyledWrapper>
   );
 }
 
 export default BubbleDao;
 
-const Wrapper = styled.div`
+const StyledWrapper = styled(Wrapper)`
     ${flexColumn('nowrap', 'flex-start', 'flex-start')};
-    position: relative;
-    margin-bottom: 6rem;
 `;
 
 const BubbleHeader = styled.div`
     ${flexRow('nowrap', 'center', 'center')};
-    z-index: 2;
+    position: relative;
     width: 100%;
-    height: 400px;
-    margin-top: -4rem;
-    margin-bottom: 1.5rem;
+    height: 45vh;
 
-    @media ${device.tablet} {
-      margin-bottom: 0;
+    @media ${device.mobile} {
+      height: 30vh;
     }
 `;
 
 const DaoBubble = styled.img`
+  z-index: 10;
   width: auto;
 
   @media ${device.tablet} {
@@ -63,13 +61,29 @@ const DaoBubble = styled.img`
   }
 `;
 
+const BubbleRight = styled.img`
+  position: absolute;
+  right: -550px;
+  transform: rotate(-15deg);
+
+  @media ${device.tablet} {
+    width: 100vw;
+    right: -275px;
+  }
+`;
+
 const StyledSubTitle = styled(SubTitle)`
+    text-align: left;
     width: 60vw;
     font-size: 1.8rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.3rem;
 
     @media ${device.tablet} {
-      width: 75vw;
+      width: 75%;
+    }
+
+    @media ${device.mobile} {
+      width: 100%;
     }
 `;
 
@@ -87,19 +101,7 @@ const StyledText = styled(Text)`
     min-width: 26vw;
 
     @media ${device.tablet} {
-    padding: 1rem;
-    padding-left: 0;
-  }
-`;
-
-const BubbleRight = styled.img`
-  position: absolute;
-  top: -200px;
-  right: -550px;
-  transform: rotate(-15deg);
-  z-index: 1;
-
-  @media ${device.tablet} {
-    width: 950px;
+      padding: 0;
+      padding-bottom: 1.5rem;
   }
 `;
