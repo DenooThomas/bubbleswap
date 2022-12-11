@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    z-index: 2;
 
   }
   body {
@@ -19,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
   :root {
-    font-size: 22px;
+    font-size: 20px;
 
     @media ${device.tablet} {
       font-size: 18px;

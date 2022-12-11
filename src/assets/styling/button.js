@@ -1,9 +1,10 @@
 import Colors from 'assets/styling/colors';
 import styled from 'styled-components';
+import device from './breakpoints';
 
 export const ButtonGlow = styled.button`
-    width: 200px;
-    height: 50px;
+    width: 12rem;
+    height: 3rem;
     border: none;
     color: ${({ dark }) => (dark ? Colors.black : Colors.white)};
     border-radius: 1.1rem;
@@ -14,6 +15,10 @@ export const ButtonGlow = styled.button`
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1.7px;
+
+    @media ${device.mobile} {
+        width: 70vw;
+    }
 `;
 
 export const ButtonGlowWide = styled(ButtonGlow)`

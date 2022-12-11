@@ -40,6 +40,7 @@ const Header = styled.div`
   height: 100px;
   padding: 0 4vw;
   position: relative;
+  z-index: 10;
 
   @media ${device.tablet} {
     ${flexRow('nowrap', 'center', 'center')};

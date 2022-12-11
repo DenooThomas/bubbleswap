@@ -1,6 +1,6 @@
 import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { ButtonGlow } from 'assets/styling/button';
 import bubble from 'assets/images/bubble.png';
 import tickerImg from 'assets/images/ticker.png';
@@ -9,12 +9,13 @@ import {
 } from 'assets/styling/text';
 import { ShadePseudo } from 'assets/styling/backgrounds';
 import device from 'assets/styling/breakpoints';
+import Wrapper from 'assets/styling/wrapper';
 
 function BubbleWhy() {
   return (
-    <Wrapper>
+    <StyledWrapper>
       <StyledHalfCont>
-        <StyledTitle>Why bubble?</StyledTitle>
+        <Title>Why bubble?</Title>
         <SubTitle>$BUB - governance & utility token</SubTitle>
         <StyledText>
           $BUB Earning and governance made simple.
@@ -31,29 +32,25 @@ function BubbleWhy() {
         </StyledSubText>
       </HalfCont>
       <BubbleRight src={bubble} alt="bubble" />
-    </Wrapper>
+    </StyledWrapper>
   );
 }
 
 export default BubbleWhy;
 
-const Wrapper = styled.div`
-  ${flexRow('wrap', 'center', 'flex-end')};
-  position: relative;
-  margin-bottom: 6rem;
+const StyledWrapper = styled(Wrapper)`
+  ${flexRow('nowrap', 'center', 'center')};
+  width: 100%;
   ${ShadePseudo}
-`;
 
-const StyledTitle = styled(Title)`
   @media ${device.tablet} {
-    text-align: center;
+    ${flexColumn('nowrap', 'space-between', 'center')};
   }
 `;
 
 const StyledText = styled(Text)`
   @media ${device.tablet} {
     text-align: center;
-    text-justify: inter-word;
   }
 `;
 
