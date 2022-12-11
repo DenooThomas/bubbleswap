@@ -93,7 +93,7 @@ const Cont = styled.div`
   }
 
   @media ${device.mobile} {
-    max-height: 100vh;
+    max-height: 120vh;
   }
 `;
 
