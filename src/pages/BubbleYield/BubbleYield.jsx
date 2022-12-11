@@ -108,11 +108,10 @@ const TextCont = styled.div`
   & * {
     margin-bottom: 1rem;
 
-    @media ${device.tablet} {
+  @media ${device.tablet} {
       margin-bottom: 1.5rem;
     }
   }
-
   @media ${device.tablet} {
     ${flexColumn('nowrap', 'space-between', 'center')};
   }
