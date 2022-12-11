@@ -53,13 +53,13 @@ const ContractBubble = styled.img`
 
   @media ${device.tablet}{
     width: 90vw;
+    margin-bottom: 2rem;
   }
 `;
 
 const Hyperlink = styled.span`
     padding-bottom: 2rem;
     padding-right:  2rem;
-
     @media ${device.tablet} {
       padding-top: 3rem;
     }
