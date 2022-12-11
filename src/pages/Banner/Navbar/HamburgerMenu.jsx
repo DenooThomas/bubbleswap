@@ -36,8 +36,8 @@ const Hamburger = styled.div`
   height: ${hamburgerHeight};
   position: absolute;
   display: none;
-  left: 2.2rem;
-  top: 2.2rem;
+  left: 2rem;
+  top: 2rem;
   z-index: 999;
 
   @media ${device.tablet} {

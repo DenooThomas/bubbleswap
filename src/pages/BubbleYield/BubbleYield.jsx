@@ -1,6 +1,7 @@
 import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
+import Wrapper from 'assets/styling/wrapper';
 import { ButtonGlowWide } from 'assets/styling/button';
 import MoneyImg from 'assets/images/money.png';
 import { Title, Intro, Text } from 'assets/styling/text';
@@ -9,9 +10,9 @@ import device from 'assets/styling/breakpoints';
 
 function BubbleYield() {
   return (
-    <Wrapper>
+    <StyledWrapper>
       <TopCont>
-        <HalfCont>
+        <TextCont>
           <Title bold>Liquidity yield farming</Title>
           <Intro>
             Bubble introduces liquid DEX trading.
@@ -24,83 +25,96 @@ function BubbleYield() {
             of trading for all involved parties.
           </Text>
           <ButtonGlowWide>Start earning yield</ButtonGlowWide>
-        </HalfCont>
+        </TextCont>
         <Money src={MoneyImg} alt="Bag of Bubble tokens" />
       </TopCont>
       <LeftCont>
-        <Title dark bold>Synthetic yield farming</Title>
-        <Intro dark bold>
-          The BubbleSwap protocol allows users to stake their liquidity provider
-          (LP) tokens and earn synthetic yield rewards.
-        </Intro>
-        <Text dark>
-          These rewards are based on a unique liquidity provider tax,
-          but are significantly higher when users lock their tokens for a certain period of time.
-          With synthetic yield farming, users can leverage their rewards, meaning they can earn more
-          while investing a smaller amount of capital.
-        </Text>
+        <TextCont>
+          <Title dark bold>Synthetic yield farming</Title>
+          <Intro dark bold>
+            The BubbleSwap protocol allows users to stake their liquidity provider
+            (LP) tokens and earn synthetic yield rewards.
+          </Intro>
+          <Text dark>
+            These rewards are based on a unique liquidity provider tax,
+            but are significantly higher when users lock their tokens for a certain period of time.
+            With synthetic yield farming, users can leverage their rewards,
+            meaning they can earn more while investing a smaller amount of capital.
+          </Text>
+        </TextCont>
       </LeftCont>
       <RightCont>
-        <Title dark bold>
-          Delta Neutral Automated Market Making
-        </Title>
-        <Intro dark bold>
-          The BubbleDeFi smart contract was created with the intention to hedge
-          for the possibility of a liquidity crunch taxing every transaction with 3% that goes
-          straight into liquidity and 2% that builds up the liquidity reserve.
-        </Intro>
-        <Text dark>
-          The BubbleDeFi smart contract was created with the intention to hedge
-          for the possibility of a liquidity crunch taxing every transaction with 3% that goes
-          straight into liquidity and 2% that builds up the liquidity reserve.
-        </Text>
+        <TextCont>
+          <Title dark bold>
+            Delta Neutral Automated Market Making
+          </Title>
+          <Intro dark bold>
+            The BubbleDeFi smart contract was created with the intention to hedge
+            for the possibility of a liquidity crunch taxing every transaction with 3% that goes
+            straight into liquidity and 2% that builds up the liquidity reserve.
+          </Intro>
+          <Text dark>
+            The BubbleDeFi smart contract was created with the intention to hedge
+            for the possibility of a liquidity crunch taxing every transaction with 3% that goes
+            straight into liquidity and 2% that builds up the liquidity reserve.
+          </Text>
+        </TextCont>
       </RightCont>
-    </Wrapper>
+    </StyledWrapper>
   );
 }
 
 export default BubbleYield;
 
-const Wrapper = styled.div`
+const StyledWrapper = styled(Wrapper)`
   ${flexRow('wrap', 'center', 'center')};
-  padding: 0 4rem;
-  margin-bottom: 3rem;
 
-  @media ${device.tablet}{
+  @media ${device.tablet} {
     padding: 0;
   }
 `;
 
-const Cont = styled.div`
-  min-height: 50vh;
+const Cont = styled.div` 
+  flex: 1;
   margin: 1px;
   background-color: ${Colors.white};
   border-radius: 1.1rem;
   border: none;
   padding: 5rem 4.5rem;
+  height: 40vh;
 
   @media ${device.tablet} {
+    ${flexColumn('nowrap', 'center', 'center')};
+    height: auto;
+    min-height: 40vh;
+    max-height: 95vh;
     padding: 3.5rem 3rem;
     border-radius: 0;
+  }
+
+  @media ${device.mobile} {
+    max-height: 100vh;
   }
 `;
 
 const TopCont = styled(Cont)`
-  ${flexRow('nowrap', 'space-between', 'center')};
+  ${flexRow('nowrap', 'space-around', 'center')};
   flex: 1 100%;
   background-color: ${Colors.glass};
-  @media ${device.tablet} {
-    ${flexColumn('nowrap', 'space-between', 'center')};
-  }
 `;
 
-const HalfCont = styled.div`
+const TextCont = styled.div`
   ${flexColumn('nowrap', 'space-between', 'flex-start')};
-  height: 40vh;
+  & * {
+    margin-bottom: 1rem;
+
+    @media ${device.tablet} {
+      margin-bottom: 1.5rem;
+    }
+  }
 
   @media ${device.tablet} {
     ${flexColumn('nowrap', 'space-between', 'center')};
-    margin-bottom: 2rem;
   }
 `;
 
@@ -110,26 +124,25 @@ const Money = styled.img`
   @media ${device.tablet} {
     width: 50vw;
   }
+  @media ${device.mobile} {
+    width: 65vw;
+  }
 `;
 
 const LeftCont = styled(Cont)`
-  ${flexColumn('nowrap', 'space-between', 'flex-start')};
-  height: 50vh;
+  ${flexColumn('nowrap', 'center', 'flex-start')};
   flex: 0.75;
 
   @media ${device.tablet} {
-    flex: 1 100%;
-    height: 330px
+    flex: 100%;
   }
 `;
 
 const RightCont = styled(Cont)`
-  ${flexColumn('nowrap', 'space-between', 'flex-start')};
-  height: 50vh;
+  ${flexColumn('nowrap', 'center', 'flex-start')};
   flex: 1;
 
   @media ${device.tablet} {
-    flex: 1 100%;
-    height: 330px
+    flex: 100%;
   }
 `;

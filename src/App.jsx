@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import GlobalStyle from 'assets/styling/globalStyle';
 import Banner from 'pages/Banner/Banner';
 import BubblyWhy from 'pages/BubbleWhy/BubbleWhy';
@@ -15,24 +14,15 @@ function App() {
     <>
       <GlobalStyle />
       <Banner />
-      <Wrapper>
-        <BubblyWhy />
-        <BubbleDao />
-        <BubbleTreasury />
-      </Wrapper>
+      <BubblyWhy />
+      <BubbleDao />
+      <BubbleTreasury />
       <BubbleYield />
-      <Wrapper>
-        <BubbleContract />
-        <BubbleNomics />
-        <Footer />
-      </Wrapper>
+      <BubbleContract />
+      <BubbleNomics />
+      <Footer />
     </>
   );
 }
 
 export default App;
-
-const Wrapper = styled.div`
-  width: 100vw;
-  padding: 0 4vw;
-`;

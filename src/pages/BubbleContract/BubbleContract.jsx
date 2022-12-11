@@ -1,6 +1,7 @@
 import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
 import styled from 'styled-components';
+import Wrapper from 'assets/styling/wrapper';
 import ContractImg from 'assets/images/BubbleContract/contract.png';
 import Colors from 'assets/styling/colors';
 import device from 'assets/styling/breakpoints';
@@ -33,11 +34,10 @@ export default function BubbleContract() {
     </Wrapper>
   );
 }
-const Wrapper = styled.div`
-  margin-bottom: 6rem;
-`;
+
 const TopCont = styled.div`
     ${flexRow('nowrap', 'space-between', 'flex-end')};
+    min-height: 30vh;
     width: 100%;
 
     @media ${device.tablet} {
@@ -60,7 +60,9 @@ const ContractBubble = styled.img`
 const Hyperlink = styled.span`
     padding-bottom: 2rem;
     padding-right:  2rem;
-    display: block;
+    @media ${device.tablet} {
+      padding-top: 3rem;
+    }
 `;
 
 const ItemCont = styled.div`
