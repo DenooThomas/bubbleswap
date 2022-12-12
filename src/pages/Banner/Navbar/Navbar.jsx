@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { flexColumn, flexRow } from 'assets/styling/flexer';
 import Colors from 'assets/styling/colors';
-import logo from 'assets/images/logo.png';
+import logo from 'assets/images/Banner/logo.png';
 import device from 'assets/styling/breakpoints';
 import HamburgerMenu from './HamburgerMenu';
 

@@ -6,7 +6,7 @@ import { ButtonGlow } from 'assets/styling/button';
 import { Title, SubTitle } from 'assets/styling/text';
 // import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
 import Wrapper from 'assets/styling/wrapper';
-import BubbleSwapSrc from 'assets/images/BubbleSwap.png';
+import BubbleSwapSrc from 'assets/images/Banner/BubbleSwap.png';
 import device from 'assets/styling/breakpoints';
 import Navbar from './Navbar/Navbar';
 

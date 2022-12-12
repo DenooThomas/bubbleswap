@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import Wrapper from 'assets/styling/wrapper';
 import { ButtonGlowWide } from 'assets/styling/button';
-import MoneyImg from 'assets/images/money.png';
+import MoneyImg from 'assets/images/BubbleYield/money.png';
 import { Title, Intro, Text } from 'assets/styling/text';
 import Colors from 'assets/styling/colors';
 import device from 'assets/styling/breakpoints';

@@ -2,7 +2,7 @@ import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
 import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
-import BubbleDaoImg from 'assets/images/BubbleDao.png';
+import BubbleDaoImg from 'assets/images/BubbleDao/BubbleDao.png';
 import { SubTitle, Text } from 'assets/styling/text';
 import Wrapper from 'assets/styling/wrapper';
 import device from 'assets/styling/breakpoints';

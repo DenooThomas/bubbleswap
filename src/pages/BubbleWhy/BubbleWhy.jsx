@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { ButtonGlow } from 'assets/styling/button';
 import bubble from 'assets/images/bubble.png';
-import tickerImg from 'assets/images/ticker.png';
+import tickerImg from 'assets/images/BubbleWhy/ticker.png';
 import {
   Title, SubTitle, Text, SubText,
 } from 'assets/styling/text';
