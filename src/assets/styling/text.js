@@ -31,7 +31,7 @@ export const SubTitle = styled.h2`
 
 export const Intro = styled.p`
   color: ${({ dark }) => (dark ? Colors.black : Colors.white)};
-  font-weight: ${({ bold }) => (bold ? 'bold' : 200)};
+  font-weight: ${({ bold }) => (bold ? 400 : 200)};
   font-size: 1.2rem;
   text-align: ${({ justify }) => (justify ? 'justify' : 'left')};
   z-index: 10;
