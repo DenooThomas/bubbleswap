@@ -21,20 +21,15 @@ const BubbleCont = styled.div`
   ${flexRow('nowrap', 'center', 'center')};
   position: relative;
   width: 100%;
-  height: 40vh;
-
+  height: 60vh;
   @media ${device.tablet} {
-    height: 30vh;
+    height: 50vh;
   }
   @media ${device.mobile} {
-    height: 20vh;
+    height: 40vh;
   }
 `;
 
 const BubbleTitle = styled.img`
-    max-width: 80vw;
-
-    @media ${device.tablet} {
-      max-width: 90vw;
-    }
+    height: 100%;
 `;
