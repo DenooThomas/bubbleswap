@@ -81,7 +81,7 @@ const Cont = styled.div`
   border-radius: 1.1rem;
   border: none;
   padding: 4vw 4vw;
-  height: 48vh;
+  height: 50vh;
 
   @media ${device.tablet} {
     ${flexColumn('nowrap', 'center', 'center')};
@@ -120,7 +120,7 @@ const TextCont = styled.div`
 
 const Money = styled.img`
   max-width: 488px;
-  width: 30vw;
+  width: 25vw;
 
   @media ${device.tablet} {
     width: 50vw;

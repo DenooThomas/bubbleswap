@@ -18,7 +18,7 @@ function Footer() {
       <StyledFooter>
         <span>
           {currentYear}
-          - BubbleSwap
+          &nbsp;- BubbleSwap
         </span>
         <List>
           <ListItem>Build</ListItem>
