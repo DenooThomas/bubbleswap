@@ -13,15 +13,16 @@ export const ShadePseudo = css`
     &:after {
     content: '';
     position: absolute;
-    left: 10px;
-    right: 10px;
-    top: -100px;
-    bottom: -150px;
+    left: 4vw;
+    right: 4vw;
+    top: -5vh;
+    bottom: -5vh;
     z-index: 1;
-    transform: skew(-10deg) rotate(-10deg);
+    transform: skew(-8deg) rotate(-8deg);
     border-radius: 2rem;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(110,110,110,0.01) 0%, rgba(0,0,0,0) 80%);
+    background: linear-gradient(170.98deg, rgba(255, 255, 255, 0.03) 6.51%, rgba(255, 255, 255, 0) 86.89%);
+    border-radius: 56px;
     pointer-events: none;
+    z-index: 1;
     }
 `;

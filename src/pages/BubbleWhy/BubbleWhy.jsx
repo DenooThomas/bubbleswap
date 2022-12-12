@@ -15,8 +15,8 @@ function BubbleWhy() {
   return (
     <StyledWrapper>
       <StyledHalfCont>
-        <Title>Why bubble?</Title>
-        <SubTitle>$BUB - governance & utility token</SubTitle>
+        <Title center large>Why bubble?</Title>
+        <SubTitle large bold>$BUB - governance & utility token</SubTitle>
         <StyledText>
           $BUB Earning and governance made simple.
           Delegating power to the community in an open DeFi protocol.
@@ -45,6 +45,7 @@ const StyledWrapper = styled(Wrapper)`
 
   @media ${device.tablet} {
     ${flexColumn('nowrap', 'space-between', 'center')};
+    padding: 0 20vw;
   }
 `;
 

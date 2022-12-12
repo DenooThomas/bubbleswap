@@ -37,7 +37,6 @@ export default function BubbleContract() {
 
 const TopCont = styled.div`
     ${flexRow('nowrap', 'space-between', 'flex-end')};
-    min-height: 30vh;
     width: 100%;
 
     @media ${device.tablet} {
@@ -53,16 +52,18 @@ const ContractBubble = styled.img`
 
   @media ${device.tablet}{
     width: 90vw;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 `;
 
 const Hyperlink = styled.span`
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     padding-right:  2rem;
     @media ${device.tablet} {
+      padding-right:  0;
       padding-top: 3rem;
     }
+
 `;
 
 const ItemCont = styled.div`

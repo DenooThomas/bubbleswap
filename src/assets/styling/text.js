@@ -5,8 +5,8 @@ import device from './breakpoints';
 export const Title = styled.h1`
   color: ${({ dark }) => (dark ? Colors.black : Colors.white)};
   width: 100%;
-  font-size: ${({ large }) => (large ? '3rem' : '1.5rem')};
-  font-weight: ${({ bold }) => (bold ? 'bold' : 200)};
+  font-size: ${({ large }) => (large ? '3rem' : '2rem')};
+  font-weight: ${({ bold }) => (bold ? 400 : 200)};
   text-transform: uppercase;
   text-align: ${({ center }) => (center ? 'center' : 'left')};
   z-index: 10;
@@ -18,8 +18,8 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h2`
   color: ${({ dark }) => (dark ? Colors.black : Colors.white)};
-  font-weight: ${({ bold }) => (bold ? 'bold' : 200)};
-  font-size: 1.1rem;
+  font-weight: ${({ bold }) => (bold ? 400 : 200)};
+  font-size: ${({ large }) => (large ? '2.5rem' : '1.1rem')};
   letter-spacing: 1px;
   text-align: ${({ center }) => (center ? 'center' : 'left')};
   z-index: 10;

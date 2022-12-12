@@ -39,6 +39,11 @@ const StyledFooter = styled.footer`
     background-color: ${Colors.glass};
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+
+    @media ${device.tablet}{
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
 `;
 
 const List = styled.ul`

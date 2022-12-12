@@ -80,20 +80,21 @@ const Cont = styled.div`
   background-color: ${Colors.white};
   border-radius: 1.1rem;
   border: none;
-  padding: 5rem 4.5rem;
-  height: 40vh;
+  padding: 4vw 4vw;
+  height: 48vh;
 
   @media ${device.tablet} {
     ${flexColumn('nowrap', 'center', 'center')};
     height: auto;
     min-height: 40vh;
     max-height: 95vh;
-    padding: 3.5rem 3rem;
+    padding: 4vw 4vw;
     border-radius: 0;
   }
 
   @media ${device.mobile} {
-    max-height: 120vh;
+    padding: 8vw 4vw;
+    max-height: auto;
   }
 `;
 
@@ -118,6 +119,7 @@ const TextCont = styled.div`
 `;
 
 const Money = styled.img`
+  max-width: 488px;
   width: 30vw;
 
   @media ${device.tablet} {
