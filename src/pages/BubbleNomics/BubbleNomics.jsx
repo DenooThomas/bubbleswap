@@ -21,7 +21,6 @@ export default BubbleNomics;
 
 const StyledWrapper = styled(Wrapper)`
   ${flexColumn('nowrap', 'center', 'center')};
-  margin-bottom: 0;
 `;
 
 const StyledTitle = styled(Title)`

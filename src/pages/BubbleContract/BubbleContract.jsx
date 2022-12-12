@@ -1,6 +1,7 @@
 import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
 import styled from 'styled-components';
+import { Title, Text } from 'assets/styling/text';
 import Wrapper from 'assets/styling/wrapper';
 import ContractImg from 'assets/images/BubbleContract/contract.png';
 import Colors from 'assets/styling/colors';
@@ -15,20 +16,20 @@ export default function BubbleContract() {
       </TopCont>
       <ItemCont>
         <Item>
-          <h1>5%</h1>
-          <p>Liquidity tax on all transactions</p>
+          <Title bold center>5%</Title>
+          <Text>Liquidity tax on all transactions</Text>
         </Item>
         <Item>
-          <h1>All</h1>
-          <p>LP tokens burned forever</p>
+          <Title bold center>All</Title>
+          <Text>LP tokens burned forever</Text>
         </Item>
         <Item>
-          <h1>100%</h1>
-          <p>Liquidity crunch</p>
+          <Title bold center>100%</Title>
+          <Text>Liquidity crunch</Text>
         </Item>
         <Item>
-          <h1>100%</h1>
-          <p>SAFU</p>
+          <Title bold center>100%</Title>
+          <Text>SAFU</Text>
         </Item>
       </ItemCont>
     </Wrapper>
@@ -37,7 +38,6 @@ export default function BubbleContract() {
 
 const TopCont = styled.div`
     ${flexRow('nowrap', 'space-between', 'flex-end')};
-    min-height: 30vh;
     width: 100%;
 
     @media ${device.tablet} {
@@ -53,16 +53,18 @@ const ContractBubble = styled.img`
 
   @media ${device.tablet}{
     width: 90vw;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 `;
 
 const Hyperlink = styled.span`
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     padding-right:  2rem;
     @media ${device.tablet} {
+      padding-right:  0;
       padding-top: 3rem;
     }
+
 `;
 
 const ItemCont = styled.div`

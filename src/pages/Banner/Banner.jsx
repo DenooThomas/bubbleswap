@@ -6,7 +6,7 @@ import { ButtonGlow } from 'assets/styling/button';
 import { Title, SubTitle } from 'assets/styling/text';
 // import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
 import Wrapper from 'assets/styling/wrapper';
-import BubbleSwapImg from 'assets/images/BubbleSwap.png';
+import BubbleSwapSrc from 'assets/images/Banner/BubbleSwap.png';
 import device from 'assets/styling/breakpoints';
 import Navbar from './Navbar/Navbar';
 
@@ -25,8 +25,8 @@ function Banner() {
           <ButtonGlow type="button">Join presale</ButtonGlow>
           {/* <BubbleAnimation /> */}
         </SubTitleContent>
-        <BubbleSwap src={BubbleSwapImg} alt="Bubble swap header" />
-        <BubbleLeft src={bubble} alt="bubble" />
+        <BubbleSwapImg src={BubbleSwapSrc} alt="Bubble swap header" />
+        <GlowLeft src={bubble} alt="bubble" />
         <GlowRight src={bubble} alt="bubble" />
       </StyledWrapper>
     </>
@@ -36,7 +36,8 @@ function Banner() {
 export default Banner;
 
 const StyledWrapper = styled(Wrapper)`
-  ${flexColumn('nowrap', 'flex-start', 'center')}; 
+  ${flexColumn('nowrap', 'flex-start', 'center')};
+  margin-bottom: 12vh;
 `;
 
 const StyledTitle = styled(Title)`
@@ -69,7 +70,8 @@ const StyledSubTitle = styled(SubTitle)`
   }
 `;
 
-const BubbleSwap = styled.img`
+const BubbleSwapImg = styled.img`
+  max-width: 744px;
   width: 65%;
   z-index: 10;
 
@@ -78,9 +80,9 @@ const BubbleSwap = styled.img`
   }
 `;
 
-const BubbleLeft = styled.img`
+const GlowLeft = styled.img`
   position: absolute;
-  top: 100px;
+  top: 0rem;
   left: -550px;
   z-index: 1;
 `;

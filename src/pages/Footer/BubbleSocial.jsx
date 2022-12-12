@@ -21,10 +21,10 @@ const BubbleCont = styled.div`
   ${flexRow('nowrap', 'center', 'center')};
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 40vh;
 
   @media ${device.tablet} {
-    height: 40vh;
+    height: 30vh;
   }
   @media ${device.mobile} {
     height: 20vh;

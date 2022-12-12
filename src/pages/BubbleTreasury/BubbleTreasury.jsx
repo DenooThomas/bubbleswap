@@ -4,7 +4,7 @@ import styled from 'styled-components/macro';
 import DiagramImg from 'assets/images/BubbleTreasury/Diagram.png';
 import WalletImg from 'assets/images/BubbleTreasury/wallet.png';
 import { SubTitle, Title, Text } from 'assets/styling/text';
-import { GlassBackground, ShadePseudo } from 'assets/styling/backgrounds';
+import { GlassBackground } from 'assets/styling/backgrounds';
 import BubbleDefault from 'assets/styling/bubble';
 import device from 'assets/styling/breakpoints';
 import Wrapper from 'assets/styling/wrapper';
@@ -39,7 +39,6 @@ export default BubbleTreasury;
 
 const StyledWrapper = styled(Wrapper)`
   ${flexRow('wrap', 'space-around', 'flex-start')};
-  ${ShadePseudo}
 
   @media ${device.tablet} {
     ${flexColumn('nowrap', 'space-between', 'center')};
@@ -48,6 +47,16 @@ const StyledWrapper = styled(Wrapper)`
 
 const StyledTitle = styled(Title)`
   margin-bottom: 1.5rem;
+  flex: 1 100%;
+`;
+
+const StyledSubTitle = styled(SubTitle)`
+  text-align: center;
+  flex: 1 100%;
+
+  @media ${device.tablet} {
+    width: 90vw;
+  }
 `;
 
 const Wallet = styled.div`
@@ -59,15 +68,6 @@ const Wallet = styled.div`
     ${flexColumn('nowrap', 'center', 'center')}
     width: 80vw;
     margin-bottom: 1rem;
-  }
-`;
-
-const StyledSubTitle = styled(SubTitle)`
-  text-align: center;
-  width: 70vw;
-
-  @media ${device.tablet} {
-    width: 90vw;
   }
 `;
 
@@ -90,6 +90,7 @@ const WalletAddress = styled.span`
   }
 `;
 const Diagram = styled.img`
+  max-width: 560px;
   width: 40vw;
 
   @media ${device.tablet} {

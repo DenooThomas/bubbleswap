@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     color: ${Colors.white};
     overflow-x: hidden;
     background-color: ${Colors.black};
