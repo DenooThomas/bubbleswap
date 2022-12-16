@@ -20,6 +20,13 @@ const GlobalStyle = createGlobalStyle`
   li {
     list-style: none;
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  button {
+    font-family: inherit;
+  }
   :root {
     font-size: 20px;
 

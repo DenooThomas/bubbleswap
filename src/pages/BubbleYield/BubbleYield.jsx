@@ -2,18 +2,23 @@ import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
 import styled from 'styled-components/macro';
 import Wrapper from 'assets/styling/wrapper';
-import { ButtonGlowWide } from 'assets/styling/button';
+import { ButtonGlow } from 'components/ButtonGlow/ButtonGlow';
 import MoneyImg from 'assets/images/BubbleYield/money.png';
 import { Title, Intro, Text } from 'assets/styling/text';
 import Colors from 'assets/styling/colors';
 import device from 'assets/styling/breakpoints';
+import { showElementDelayed } from 'assets/animations/animations';
 
 function BubbleYield() {
   return (
-    <StyledWrapper>
+    <StyledWrapper
+      variants={showElementDelayed}
+      initial="hidden"
+      animate="visible"
+    >
       <TopCont>
         <TextCont>
-          <Title bold>Liquidity yield farming</Title>
+          <Title $bold>Liquidity yield farming</Title>
           <Intro>
             Bubble introduces liquid DEX trading.
             Creating a sustainable way for community projects to trade on a decentralized market.
@@ -24,18 +29,18 @@ function BubbleYield() {
             tokens. Providing a more expanding and efficient way
             of trading for all involved parties.
           </Text>
-          <ButtonGlowWide>Start earning yield</ButtonGlowWide>
+          <ButtonGlow $wide>Start earning yield</ButtonGlow>
         </TextCont>
         <Money src={MoneyImg} alt="Bag of Bubble tokens" />
       </TopCont>
       <LeftCont>
         <TextCont>
-          <Title dark bold>Synthetic yield farming</Title>
-          <Intro dark bold>
+          <Title $dark $bold>Synthetic yield farming</Title>
+          <Intro $dark $bold>
             The BubbleSwap protocol allows users to stake their liquidity provider
             (LP) tokens and earn synthetic yield rewards.
           </Intro>
-          <Text dark>
+          <Text $dark>
             These rewards are based on a unique liquidity provider tax,
             but are significantly higher when users lock their tokens for a certain period of time.
             With synthetic yield farming, users can leverage their rewards,
@@ -45,15 +50,15 @@ function BubbleYield() {
       </LeftCont>
       <RightCont>
         <TextCont>
-          <Title dark bold>
+          <Title $dark $bold>
             Delta Neutral Automated Market Making
           </Title>
-          <Intro dark bold>
+          <Intro $dark $bold>
             The BubbleDeFi smart contract was created with the intention to hedge
             for the possibility of a liquidity crunch taxing every transaction with 3% that goes
             straight into liquidity and 2% that builds up the liquidity reserve.
           </Intro>
-          <Text dark>
+          <Text $dark>
             The BubbleDeFi smart contract was created with the intention to hedge
             for the possibility of a liquidity crunch taxing every transaction with 3% that goes
             straight into liquidity and 2% that builds up the liquidity reserve.

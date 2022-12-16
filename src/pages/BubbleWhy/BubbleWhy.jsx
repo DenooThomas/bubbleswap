@@ -1,27 +1,36 @@
-import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
-import styled from 'styled-components/macro';
-import { ButtonGlow } from 'assets/styling/button';
+import styled from 'styled-components';
+import { flexColumn, flexRow } from 'assets/styling/flexer';
+import { ButtonGlow } from 'components/ButtonGlow/ButtonGlow';
 import bubble from 'assets/images/bubble.png';
 import tickerImg from 'assets/images/BubbleWhy/ticker.png';
 import {
   Title, SubTitle, Text, SubText,
 } from 'assets/styling/text';
-import { ShadePseudo } from 'assets/styling/backgrounds';
+import { shadePseudo } from 'assets/styling/backgrounds';
 import device from 'assets/styling/breakpoints';
 import Wrapper from 'assets/styling/wrapper';
+import { showElementDelayed } from 'assets/animations/animations';
 
 function BubbleWhy() {
   return (
-    <StyledWrapper>
+    <StyledWrapper
+      variants={showElementDelayed}
+      initial="hidden"
+      animate="visible"
+    >
       <StyledHalfCont>
-        <Title center large>Why bubble?</Title>
-        <SubTitle large bold>$BUB - governance & utility token</SubTitle>
+        <Title $center $large>
+          Why bubble?
+        </Title>
+        <SubTitle $large $bold>
+          $BUB - governance & utility token
+        </SubTitle>
         <StyledText>
           $BUB Earning and governance made simple.
           Delegating power to the community in an open DeFi protocol.
         </StyledText>
-        <ButtonGlow type="button">Join discord</ButtonGlow>
+        <ButtonGlow>Join discord</ButtonGlow>
       </StyledHalfCont>
       <HalfCont>
         <BubbleTicker src={tickerImg} alt="Bubble ticker $BUB" />
@@ -41,7 +50,7 @@ export default BubbleWhy;
 const StyledWrapper = styled(Wrapper)`
   ${flexRow('nowrap', 'center', 'center')};
   width: 100%;
-  ${ShadePseudo}
+  ${shadePseudo}
 
   @media ${device.tablet} {
     ${flexColumn('nowrap', 'space-between', 'center')};

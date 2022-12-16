@@ -6,10 +6,15 @@ import BubbleDaoImg from 'assets/images/BubbleDao/BubbleDao.png';
 import { SubTitle, Text } from 'assets/styling/text';
 import Wrapper from 'assets/styling/wrapper';
 import device from 'assets/styling/breakpoints';
+import { showElementDelayed } from 'assets/animations/animations';
 
 function BubbleDao() {
   return (
-    <StyledWrapper>
+    <StyledWrapper
+      variants={showElementDelayed}
+      initial="hidden"
+      animate="visible"
+    >
       <BubbleHeader>
         <DaoBubble src={BubbleDaoImg} alt="Bubble Dao header" />
         <BubbleRight src={bubble} alt="bubble" />

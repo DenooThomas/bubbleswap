@@ -1,18 +1,25 @@
-import { flexColumn, flexRow } from 'assets/styling/flexer';
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
+import Colors from 'assets/styling/colors';
+import { flexColumn, flexRow } from 'assets/styling/flexer';
 import DiagramImg from 'assets/images/BubbleTreasury/Diagram.png';
 import WalletImg from 'assets/images/BubbleTreasury/wallet.png';
-import { SubTitle, Title, Text } from 'assets/styling/text';
-import { GlassBackground } from 'assets/styling/backgrounds';
+import { SubTitle, Title } from 'assets/styling/text';
+import { glassBackground } from 'assets/styling/backgrounds';
 import BubbleDefault from 'assets/styling/bubble';
 import device from 'assets/styling/breakpoints';
 import Wrapper from 'assets/styling/wrapper';
+import { showElementDelayed } from 'assets/animations/animations';
+import { Link } from 'react-router-dom';
 
 function BubbleTreasury() {
   return (
-    <StyledWrapper>
-      <StyledTitle center bold large>Bubble treasury</StyledTitle>
+    <StyledWrapper
+      variants={showElementDelayed}
+      initial="hidden"
+      animate="visible"
+    >
+      <StyledTitle $center $bold $large>Bubble treasury</StyledTitle>
       <StyledSubTitle>All wallets are protected through safe multisig wallets</StyledSubTitle>
       <Wallet>
         <WalletItem>
@@ -28,7 +35,7 @@ function BubbleTreasury() {
           <WalletIcon src={WalletImg} alt="Wallet icon" />
           <WalletAddress>0xb794f5ea0ba39494ce839613fffba742795</WalletAddress>
         </WalletItem>
-        <StyledText>Follow treasury</StyledText>
+        <StyledLink to="/">Follow treasury</StyledLink>
       </Wallet>
       <Diagram src={DiagramImg} alt="Diagram" />
     </StyledWrapper>
@@ -75,7 +82,7 @@ const WalletItem = styled.div`
   ${flexRow('nowrap', 'space-between', 'center')};
   position: relative;
   padding: 1.2rem;
-  ${GlassBackground};
+  ${glassBackground};
   border-radius: 0.5rem;
   margin: 1px;
 `;
@@ -106,8 +113,13 @@ const WalletBubble = styled(BubbleDefault)`
   left: -275px;
 `;
 
-const StyledText = styled(Text)`
+const StyledLink = styled(Link)`
   width: 100%;
   text-align: right;
   padding-top: 20px;
+  transition: all 0.3s ease-out;
+  &:hover, 
+  &:focus {
+    color: ${Colors.lightblue};
+  }
 `;

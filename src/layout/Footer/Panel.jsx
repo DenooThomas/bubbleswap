@@ -1,19 +1,24 @@
-import { ButtonGlow } from 'assets/styling/button';
+import { ButtonGlow } from 'components/ButtonGlow/ButtonGlow';
 import { flexColumn } from 'assets/styling/flexer';
 import { SubTitle, Title, Text } from 'assets/styling/text';
 import React from 'react';
 import styled from 'styled-components';
 import Wrapper from 'assets/styling/wrapper';
 import device from 'assets/styling/breakpoints';
+import { showElementDelayed } from 'assets/animations/animations';
 
 function Panel() {
   return (
-    <StyledWrapper>
+    <StyledWrapper
+      variants={showElementDelayed}
+      initial="hidden"
+      animate="visible"
+    >
       <PanelCont>
-        <Title bold dark center large>Bubble liquid dex trading</Title>
-        <SubTitle dark large>Connect your crypto wallet to start using dApp</SubTitle>
-        <ButtonGlow>Join presale</ButtonGlow>
-        <Text dark>No registration needed</Text>
+        <Title $bold $dark $center $large>Bubble liquid dex trading</Title>
+        <SubTitle $dark $large>Connect your crypto wallet to start using dApp</SubTitle>
+        <ButtonGlow $wide>Join presale</ButtonGlow>
+        <Text $dark>No registration needed</Text>
       </PanelCont>
     </StyledWrapper>
   );
@@ -22,7 +27,6 @@ function Panel() {
 export default Panel;
 
 const StyledWrapper = styled(Wrapper)`
-  margin-bottom: 10vh;
   @media ${device.tablet} {
     padding: 0;
   }
