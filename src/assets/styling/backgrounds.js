@@ -1,15 +1,19 @@
 import { css } from 'styled-components';
 
-export const GlassBackground = css`
-    background: linear-gradient(93.15deg, rgba(255, 255, 255, 0.05) 5.22%, rgba(255, 255, 255, 0) 65.54%);
-    backdrop-filter: blur(7.5px);
+export const glassBackground = css`
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 `;
 
-export const SmokeBackground = css`
+export const smokeBackground = css`
     background: linear-gradient(155.94deg, rgba(44, 112, 213, 0.1) -34.45%, rgba(255, 255, 255, 0) 55.98%), rgba(255, 255, 255, 0.05);
 `;
 
-export const ShadePseudo = css`
+export const shadePseudo = css`
     &:after {
     content: '';
     position: absolute;

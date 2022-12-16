@@ -1,19 +1,13 @@
-import React from 'react';
 import styled from 'styled-components';
 import bubble from 'assets/images/bubble.png';
 
-function Bubble() {
-  return (
-    <BubbleStyling />
-  );
-}
-
-export default Bubble;
-
-const BubbleStyling = styled.div`
+const glowBubble = styled.div`
   position: absolute;
   background-image: url(${bubble});
   background-repeat: no-repeat;
-  max-width: 1000px;
+  width: 1000px;
+  height: 736px;
   z-index: 1;
 `;
+
+export default glowBubble;

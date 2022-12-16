@@ -1,35 +1,58 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import bubble from 'assets/images/bubble.png';
 import { flexColumn, flexRow } from 'assets/styling/flexer';
-import { ButtonGlow } from 'assets/styling/button';
+import { ButtonGlow } from 'components/ButtonGlow/ButtonGlow';
 import { Title, SubTitle } from 'assets/styling/text';
 // import BubbleAnimation from './BubbleAnimation/BubbleAnimation';
 import Wrapper from 'assets/styling/wrapper';
 import BubbleSwapSrc from 'assets/images/Banner/BubbleSwap.png';
 import device from 'assets/styling/breakpoints';
-import Navbar from './Navbar/Navbar';
+import { showElement, showElementDelayed } from 'assets/animations/animations';
 
 function Banner() {
   return (
-    <>
-      <Navbar />
-      <StyledWrapper>
-        <StyledTitle center bold large>Bubble liquid dex trading</StyledTitle>
-        <SubTitleContent>
-          <StyledSubTitle>
-            Bubble generates deeper liquidity for optimal trading experience.
-            Liquidity is secured by perpetually burning LP tokens
-            and + and incentivizing higher rewards for LP providers.
-          </StyledSubTitle>
-          <ButtonGlow type="button">Join presale</ButtonGlow>
-          {/* <BubbleAnimation /> */}
-        </SubTitleContent>
-        <BubbleSwapImg src={BubbleSwapSrc} alt="Bubble swap header" />
-        <GlowLeft src={bubble} alt="bubble" />
-        <GlowRight src={bubble} alt="bubble" />
-      </StyledWrapper>
-    </>
+    <StyledWrapper
+      variants={showElementDelayed}
+      initial="hidden"
+      animate="visible"
+    >
+      <StyledTitle
+        $center
+        $bold
+        $large
+        variants={showElement}
+      >
+        Bubble liquid dex trading
+      </StyledTitle>
+      <SubTitleContent
+        variants={showElement}
+      >
+        <StyledSubTitle
+          variants={showElement}
+        >
+          Bubble generates deeper liquidity for optimal trading experience.
+          Liquidity is secured by perpetually burning LP tokens
+          and + and incentivizing higher rewards for LP providers.
+        </StyledSubTitle>
+        <ButtonGlow>Join presale</ButtonGlow>
+        {/* <BubbleAnimation /> */}
+      </SubTitleContent>
+      <BubbleSwapImg
+        src={BubbleSwapSrc}
+        alt="Bubble swap header"
+        variants={showElement}
+      />
+      <GlowLeft
+        src={bubble}
+        alt="bubble"
+      />
+      <GlowRight
+        src={bubble}
+        alt="bubble"
+      />
+    </StyledWrapper>
   );
 }
 
@@ -45,7 +68,7 @@ const StyledTitle = styled(Title)`
   z-index: 10;
 `;
 
-const SubTitleContent = styled.div`
+const SubTitleContent = styled(motion.div)`
   ${flexRow('nowrap', 'center', 'center')};
   width: 100%;
   margin-bottom: 2rem;
@@ -70,7 +93,7 @@ const StyledSubTitle = styled(SubTitle)`
   }
 `;
 
-const BubbleSwapImg = styled.img`
+const BubbleSwapImg = styled(motion.img)`
   max-width: 744px;
   width: 65%;
   z-index: 10;

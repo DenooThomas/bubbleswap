@@ -4,10 +4,15 @@ import styled from 'styled-components';
 import BubbleTitleImg from 'assets/images/BubbleSocial/BubbleTitle.png';
 import device from 'assets/styling/breakpoints';
 import Wrapper from 'assets/styling/wrapper';
+import { showElementDelayed } from 'assets/animations/animations';
 
 function BubbleSocial() {
   return (
-    <Wrapper>
+    <Wrapper
+      variants={showElementDelayed}
+      initial="hidden"
+      animate="visible"
+    >
       <BubbleCont>
         <BubbleTitle src={BubbleTitleImg} alt="Bubble title" />
       </BubbleCont>
@@ -21,15 +26,16 @@ const BubbleCont = styled.div`
   ${flexRow('nowrap', 'center', 'center')};
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   @media ${device.tablet} {
-    height: 50vh;
+    height: 40vh;
   }
   @media ${device.mobile} {
-    height: 40vh;
+    height: 30vh;
   }
 `;
 
 const BubbleTitle = styled.img`
-    height: 100%;
+    margin-right: -6vw;
+    height: 75%;
 `;

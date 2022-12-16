@@ -1,26 +1,23 @@
 import device from 'assets/styling/breakpoints';
 import Colors from 'assets/styling/colors';
 import { flexColumn } from 'assets/styling/flexer';
+import { motion } from 'framer-motion';
 import React from 'react';
 import styled from 'styled-components';
+import hamburgerVariants from './animations/hamburgerVariants';
 
 function HamburgerMenu(props) {
-  const { isOpen, setIsOpen } = props;
-
-  function toggleOpen() {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      document.body.removeAttribute('style');
-    } else {
-      document.body.style.overflow = 'hidden';
-    }
-  }
+  const { isOpen, toggleOpen } = props;
 
   return (
-    <Hamburger onClick={() => toggleOpen()}>
-      <StripeTop isOpen={isOpen} />
-      <StripeMiddle isOpen={isOpen} />
-      <StripeBottom isOpen={isOpen} />
+    <Hamburger
+      onClick={() => toggleOpen()}
+      variants={hamburgerVariants}
+      whileTap="rotate"
+    >
+      <StripeTop $isOpen={isOpen} />
+      <StripeMiddle $isOpen={isOpen} />
+      <StripeBottom $isOpen={isOpen} />
     </Hamburger>
   );
 }
@@ -30,7 +27,7 @@ export default HamburgerMenu;
 const hamburgerWidth = '30px';
 const hamburgerHeight = '25px';
 
-const Hamburger = styled.div`
+const Hamburger = styled(motion.div)`
   ${flexColumn('nowrap', 'space-between', 'center')};
   width: ${hamburgerWidth};
   height: ${hamburgerHeight};
@@ -44,7 +41,7 @@ const Hamburger = styled.div`
     display: flex;
   }
 `;
-const Stripe = styled.rect`
+const Stripe = styled(motion.span)`
   width: ${hamburgerWidth};
   height: 3px;
   background-color: ${Colors.white};
@@ -53,13 +50,13 @@ const Stripe = styled.rect`
 `;
 
 const StripeTop = styled(Stripe)`
-  transform: ${({ isOpen }) => (isOpen ? 'rotate(45deg)' : 'rotate(0)')};
+  transform: ${({ $isOpen }) => ($isOpen ? 'rotate(45deg)' : 'rotate(0)')};
 `;
 
 const StripeMiddle = styled(Stripe)`
-  display: ${({ isOpen }) => (isOpen ? 'none' : 'inline')};
+  display: ${({ $isOpen }) => ($isOpen ? 'none' : 'inline')};
 `;
 
 const StripeBottom = styled(Stripe)`
-  transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
+  transform: ${({ $isOpen }) => ($isOpen ? 'rotate(-45deg)' : 'rotate(0)')};
 `;
