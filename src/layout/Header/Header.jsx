@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -21,6 +21,15 @@ function Header() {
     }
   }
 
+  function closeHamburger() {
+    setIsOpen(false);
+    document.body.removeAttribute('style');
+  }
+
+  useEffect(() => {
+    console.log('isOpen => ', isOpen);
+  }, []);
+
   const navigation = ['bubbleSwap', 'dao', 'treasury', 'contract', 'protocol', 'tokenomics'];
 
   return (
@@ -28,12 +37,12 @@ function Header() {
       <HamburgerMenu isOpen={isOpen} toggleOpen={() => toggleOpen()} />
       <Link to="/"><Logo src={logo} alt="Logo" /></Link>
       <Nav isOpen={isOpen}>
-        <NavItem to="/" onClick={() => toggleOpen()}>Home</NavItem>
+        <NavItem to="/" onClick={() => closeHamburger()}>Home</NavItem>
         {navigation.map((item) => (
           <NavItem
             key={item}
             to={`/${item}`}
-            onClick={() => toggleOpen()}
+            onClick={() => closeHamburger()}
             $uppercase={item === 'dao'}
           >
             {item}
@@ -63,7 +72,7 @@ export default Header;
 const HeaderCont = styled.div`
   ${flexRow('nowrap', 'space-between', 'center')};
   width: 100%;
-  height: 7rem;
+  height: 6rem;
   padding: 0 4vw;
   position: relative;
   z-index: 10;
